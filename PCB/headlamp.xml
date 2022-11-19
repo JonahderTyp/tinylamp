@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\jonah\Projects\HeadlampV3\headlampLED\headlamp.kicad_sch</source>
+    <date>11/12/2022 11:08:21 PM</date>
+    <tool>Eeschema (6.0.6)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>headlamp.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="D1">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b5ee0254-2a5b-4220-98f1-1f7421351016</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>462d436f-a112-4cba-820b-103dba882436</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7b1ff8c9-8a62-46eb-adac-8f8311deb086</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9dab0ab-6567-4f5a-a180-304b7bd35337</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc32d0d6-abab-40b6-a83a-8b5626016dcf</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>78b523b7-dca2-415a-a91e-826a34a44123</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c41fac73-5881-48f0-8d62-2d89bd7b6775</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>LEDA</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00024ba2-c963-4c48-a507-834175125c4c</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>LEDW</value>
+      <footprint>LED_SMD:LED_PLCC-2</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4fa5e57f-ca8d-4b76-b624-368cde2381c4</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>LEDW</value>
+      <footprint>LED_SMD:LED_PLCC-2</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0aa0f166-bd1b-4912-9355-4145fa51e745</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>LEDW</value>
+      <footprint>LED_SMD:LED_PLCC-2</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c200056-0718-4a09-bb44-947985dd73fe</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>LEDW</value>
+      <footprint>LED_SMD:LED_PLCC-2</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5244c940-e9b1-442c-ab09-11d51c276ee2</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58366f4a-0351-4e3d-bc9f-5270741dde89</tstamps>
+    </comp>
+    <comp ref="D14">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c20bb375-49d0-4103-8e49-6ff91b50e92a</tstamps>
+    </comp>
+    <comp ref="D15">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3f8aa888-0e6a-447e-9e7a-84ea02f54d83</tstamps>
+    </comp>
+    <comp ref="D16">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b121a4a-d11e-4373-9c0f-8bd28a8d70a3</tstamps>
+    </comp>
+    <comp ref="D17">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7a8848e-b5a1-4df0-b7e9-b9a0fe2eb3a9</tstamps>
+    </comp>
+    <comp ref="D18">
+      <value>WS2812B</value>
+      <footprint>LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</footprint>
+      <datasheet>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</datasheet>
+      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3012a6bb-5fcb-4df2-8dbb-49eb32d1ddf9</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>USB_B_Mini</value>
+      <footprint>Connector_USB:USB_Mini-B_Lumberg_2486_01_Horizontal</footprint>
+      <libsource lib="Connector" part="USB_B_Mini" description="USB Mini Type B connector"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ba1c0e7-6232-4a18-956e-fce64a182a7c</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_02x03_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e458ba9-9657-46f5-8818-fab76c9c3964</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>SolderJumper_2_Open</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_2_Open" description="Solder Jumper, 2-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff1ffc55-9161-427e-891d-7285f9286e45</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>Q_NPN_BCE</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_TWGMC-S9013_C727139.html</datasheet>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f13577fe-38d8-4b40-b2b6-fb2eafb7d138</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>Q_NPN_BCE</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4eeebcc0-d0c3-4813-a3e4-24293a32aee3</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>Q_NPN_BCE</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <libsource lib="Device" part="Q_NPN_BCE" description="NPN transistor, base/collector/emitter"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61a6a0a3-fb1c-4ff4-92c5-c59f583afee7</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a8a672ce-106c-4d3e-904a-eb6625ae4971</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>110R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>95fdf7d5-439f-48cb-971c-9aa47e5feb04</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>110R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0cc0c77e-2e42-4bd1-a6a2-5a9d82557d66</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32c29ac7-bb52-43d5-a32a-0000b8797f6a</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>15R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39413077-1f35-411b-8899-18e90ba06eb5</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>15R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba9fb8de-899d-480d-ae96-4355254a326d</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>15R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f5ec8fe-4848-4627-8767-97ad59593067</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>15R</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ecabb941-7aac-4eff-b8be-34aef3376f66</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29569a3d-058b-44f3-b5ad-79d9100f3327</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82e84135-c946-4043-905a-87303292e51e</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>8K2</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2acbed3-5095-40c5-9a9f-4486a0bdf154</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>4K7</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>123ecc68-9f95-482a-90c6-73a7a8deaeeb</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>2K2</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e9f4c1d7-9b97-4301-95a3-a632bf71907c</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>1K2</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>958e5067-8cd3-4b92-acd2-62b0e25192b6</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>2K7</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8be5ffc4-c954-4a0c-a82a-2180913ff121</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Mode</value>
+      <footprint>Button_Switch_SMD:SW_SPST_CK_RS282G05A3</footprint>
+      <datasheet>https://www.lcsc.com/product-detail/Tactile-Switches_XKB-Connectivity-TS-1101-C-W_C318938.html</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0101eaa3-a710-4ee1-b6d9-8470a5444274</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_ONOFF</value>
+      <footprint>Button_Switch_SMD:SW_SPST_CK_RS282G05A3</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c093398b-0c28-43b6-b7cf-e6cd9eabc571</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_COLOR</value>
+      <footprint>Button_Switch_SMD:SW_SPST_CK_RS282G05A3</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b600b82f-3cf0-4703-b4c0-7825e409e95f</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_COLOR</value>
+      <footprint>Button_Switch_SMD:SW_SPST_CK_RS282G05A3</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc861cb2-3f0e-4fc1-b3e8-424a4c93f954</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>TP4056</value>
+      <footprint>Package_SO:HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.3x2.3mm</footprint>
+      <libsource lib="BatteryProtection" part="TP4056" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c735683a-1c32-4062-8f8c-3b4c4c555ee0</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>ATtiny13A-SS</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf</datasheet>
+      <libsource lib="MCU_Microchip_ATtiny" part="ATtiny13A-SS" description="20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba1b8929-45c3-4bb8-b5e2-866e8f2b8085</tstamps>
+    </comp>
+    <comp ref="X1">
+      <value>BATT+</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79ebde55-1c5d-4440-af66-efda40d6620c</tstamps>
+    </comp>
+    <comp ref="X2">
+      <value>BATT-</value>
+      <footprint>TestPoint:TestPoint_Keystone_5015_Micro-Minature</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="headlamp.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a60c076c-5c81-40d6-95d5-0a9a696276d7</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="BatteryProtection" part="TP4056">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TP4056</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TEMP" type="input"/>
+        <pin num="2" name="PROG" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="BAT" type="input"/>
+        <pin num="6" name="STDBY" type="input"/>
+        <pin num="7" name="CHRG" type="input"/>
+        <pin num="8" name="CE" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_B_Mini">
+      <description>USB Mini Type B connector</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B_Mini</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="bidirectional"/>
+        <pin num="3" name="D+" type="bidirectional"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
+      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NPN_BCE">
+      <description>NPN transistor, base/collector/emitter</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BCE</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_2_Open">
+      <description>Solder Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_2_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LED" part="WS2812B">
+      <description>RGB LED with integrated controller</description>
+      <docs>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</docs>
+      <footprints>
+        <fp>LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">WS2812B</field>
+        <field name="Footprint">LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</field>
+        <field name="Datasheet">https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="DOUT" type="output"/>
+        <pin num="3" name="VSS" type="power_in"/>
+        <pin num="4" name="DIN" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Microchip_ATtiny" part="ATtiny13A-SS">
+      <description>20MHz, 1kB Flash, 64B SRAM, 64B EEPROM, debugWIRE, SOIC-8</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ATtiny13A-SS</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{RESET}/PB5" type="bidirectional"/>
+        <pin num="2" name="PB3" type="bidirectional"/>
+        <pin num="3" name="PB4" type="bidirectional"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="PB0" type="bidirectional"/>
+        <pin num="6" name="PB1" type="bidirectional"/>
+        <pin num="7" name="PB2" type="bidirectional"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="BatteryProtection">
+      <uri>C:/Users/jonah/KiCad-Libs/BatteryProtection.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="LED">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/LED.kicad_sym</uri>
+    </library>
+    <library logical="MCU_Microchip_ATtiny">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/MCU_Microchip_ATtiny.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/PB0">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="PB0" pintype="bidirectional"/>
+    </net>
+    <net code="2" name="/PB1">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="PB1" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/PB2">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="PB2" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/PB3">
+      <node ref="D13" pin="4" pinfunction="DIN" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="PB3" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/PB4">
+      <node ref="U1" pin="7" pinfunction="CHRG" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="PB4" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/PROG">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="PROG" pintype="input"/>
+    </net>
+    <net code="7" name="/RST">
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="~{RESET}/PB5" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="GND">
+      <node ref="D13" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D14" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D15" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D16" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D17" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="D18" pin="3" pinfunction="VSS" pintype="power_in"/>
+      <node ref="J1" pin="5" pinfunction="GND" pintype="power_out"/>
+      <node ref="J1" pin="6" pinfunction="Shield" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="E" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="E" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="E" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="TEMP" pintype="input"/>
+      <node ref="U1" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="X2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(D5-Pad1)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D9-Pad1)">
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(D10-Pad1)">
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(D11-Pad1)">
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(D12-Pad1)">
+      <node ref="D12" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(D13-Pad2)">
+      <node ref="D13" pin="2" pinfunction="DOUT" pintype="output"/>
+      <node ref="D14" pin="4" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="16" name="Net-(D14-Pad2)">
+      <node ref="D14" pin="2" pinfunction="DOUT" pintype="output"/>
+      <node ref="D15" pin="4" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="17" name="Net-(D15-Pad2)">
+      <node ref="D15" pin="2" pinfunction="DOUT" pintype="output"/>
+      <node ref="D16" pin="4" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="18" name="Net-(D16-Pad2)">
+      <node ref="D16" pin="2" pinfunction="DOUT" pintype="output"/>
+      <node ref="D17" pin="4" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(D17-Pad2)">
+      <node ref="D17" pin="2" pinfunction="DOUT" pintype="output"/>
+      <node ref="D18" pin="4" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(J1-Pad4)">
+      <node ref="J1" pin="4" pinfunction="ID" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(Q1-Pad2)">
+      <node ref="Q1" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(Q2-Pad1)">
+      <node ref="Q2" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(Q3-Pad1)">
+      <node ref="Q3" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(Q3-Pad2)">
+      <node ref="Q3" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(R11-Pad1)">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(R12-Pad1)">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(R13-Pad1)">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(R14-Pad1)">
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="31" name="VBUS">
+      <node ref="J1" pin="1" pinfunction="VBUS" pintype="power_out"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U1" pin="8" pinfunction="CE" pintype="input"/>
+    </net>
+    <net code="32" name="VCC">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D12" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D14" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D15" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D16" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D17" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D18" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="BAT" pintype="input"/>
+      <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
+      <node ref="X1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="33" name="unconnected-(D18-Pad2)">
+      <node ref="D18" pin="2" pinfunction="DOUT" pintype="output+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(J1-Pad2)">
+      <node ref="J1" pin="2" pinfunction="D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(J1-Pad3)">
+      <node ref="J1" pin="3" pinfunction="D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-Pad6)">
+      <node ref="U1" pin="6" pinfunction="STDBY" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

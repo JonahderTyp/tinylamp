@@ -1,0 +1,4 @@
+70ms ON
+20ms OFF
+70ms ON
+170ms OFF
