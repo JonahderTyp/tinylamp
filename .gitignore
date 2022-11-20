@@ -1,23 +1,23 @@
 # Temporary files
-*.000
-*.bak
-*.bck
-*.kicad_pcb-bak
-*.kicad_sch-bak
-*.kicad_prl
-*.sch-bak
-*~
+PCB/*.000
+PCB/*.bak
+PCB/*.bck
+PCB/*.kicad_pcb-bak
+PCB/*.kicad_sch-bak
+PCB/*.kicad_prl
+PCB/*.sch-bak
+PCB/*~
 _autosave-*
-*.tmp
-*-save.pro
-*-save.kicad_pcb
-fp-info-cache
+PCB/*.tmp
+PCB/*-save.pro
+PCB/*-save.kicad_pcb
+PCB/fp-info-cache
 
 # Netlist files (exported from Eeschema)
-*.net
+PCB/*.net
 
 #kicad Backup
-*-backups/
+PCB/*-backups/
 
 
 /software/old
