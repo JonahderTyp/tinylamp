@@ -16,7 +16,9 @@ fp-info-cache
 # Netlist files (exported from Eeschema)
 *.net
 
+#kicad Backup
+*-backups/
+
 
 /software/old
-#*.kicad_prl
-#PCB/headlamp.kicad_prl
+
