@@ -1,3 +1,5 @@
 /PCB/headlamp-backups
 /PCB/grb
 /software/old
+*.kicad_prl
+PCB/headlamp.kicad_prl
