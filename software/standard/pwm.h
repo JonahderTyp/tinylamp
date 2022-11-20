@@ -17,11 +17,11 @@ static void pwm_set_frequency(uint32_t N) {
   TCCR0B = (TCCR0B & ~((1 << CS02) | (1 << CS01) | (1 << CS00))) | N;  // set prescaler
 }
 
-static void pwm_set_duty1inv(uint8_t duty) {
+static void pwm_set_duty0inv(uint8_t duty) {
   OCR0A = 255 - duty;  // set the OCRnx
 }
 
-static void pwm_set_duty2inv(uint8_t duty) {
+static void pwm_set_duty1inv(uint8_t duty) {
   OCR0B = 255 - duty;  // set the OCRnx
 }
 
