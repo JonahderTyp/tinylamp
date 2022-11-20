@@ -1,0 +1,12 @@
+== Modes
+
+[start=0]
+. Warm White
+. Orange + Warm White
+. Orange
+. Red
+. Green
+. Blue
+. Orange
+. Warning Light
+. SOS

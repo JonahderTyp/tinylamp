@@ -1,0 +1,8 @@
+== ISP Connector Pinout
+[start=1]
+. PB1
+. VBUS
+. PB2
+. PB0
+. RST
+. GND

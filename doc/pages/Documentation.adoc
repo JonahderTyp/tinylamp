@@ -1,0 +1,11 @@
+= tinylamp
+Jonah Wille
+
+
+include::gpio.adoc[]
+
+include::isp.adoc[]
+
+<<<
+
+include::modes.adoc[]
