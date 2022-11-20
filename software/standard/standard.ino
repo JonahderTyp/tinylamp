@@ -35,29 +35,32 @@ struct pixel {
 
 
 int main(void) {
-  sei();
   DDRB |= _BV(LEDW) | _BV(LEDA) | _BV(ALED) | _BV(ALEDEN);
   PORTB |= (_BV(LEDW) | _BV(LEDA) | _BV(ALEDEN));
 
   //struct pixel p = { 0, 10, 0 };
 
-  uint8_t duty = 0;
 
+  //mode
+  uint8_t mode = 0;
+
+  //pwm
+  uint8_t ch0, ch1;
   pwm_init();
   pwm_set_frequency(N_8);
-  pwm_set_duty1inv(5);
-  pwm_set_duty2inv(0);
+  pwm_set_duty0inv(0);
+  pwm_set_duty1inv(0);
 
+
+  //adc
   adc_init();
   uint16_t data = 0;
 
+  //flashing
   TIMSK0 |= _BV(TOIE0);  // enable Timer Overflow interrupt
   sei();                 // enable global interrupts
-
   uint8_t flashcounter = 0;
-
   uint64_t lastflash = 0;
-
   uint16_t doubleinterval = 40;  //~10ms
 
 
@@ -68,27 +71,31 @@ int main(void) {
     if (halfMillis - lastflash >= doubleinterval) {
       lastflash = halfMillis;
       flashcounter++;
-      PORTB |= _BV(ALEDEN);
+      //PORTB |= _BV(ALEDEN);
     }
 
-    PORTB &= ~_BV(ALEDEN);
+    //PORTB &= ~_BV(ALEDEN);
 
     struct pixel p = { 0, 0, 0 };
 
-    switch (flashcounter) {
-      case 0:
-      case 9:
-      case 18:
-      //p = {ORANGE};
-      break;
-      case 7:
-      case 16:
-      case 25:
-      p = {0,0,0};
-      break;
-      case 42:
-      flashcounter = -1;
-      break;
+    switch (mode) {
+      case 1:
+        switch (flashcounter) {
+          case 0:
+          case 9:
+          case 18:
+            //p = {ORANGE};
+            break;
+          case 7:
+          case 16:
+          case 25:
+            p = { 0, 0, 0 };
+            break;
+          case 42:
+            flashcounter = -1;
+            break;
+            break;
+        }
     }
 
     for (int i = 0; i < PIXEL_NUM; ++i)
