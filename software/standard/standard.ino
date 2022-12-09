@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include "pwm.h"
 #include "aled.h"
-#include "adc.h"
 #include "colors.h"
+#include "button.h"
 
 
 #define LEDW (PB0)
@@ -16,16 +16,15 @@
 
 #define PIXEL_NUM (8)
 
-uint8_t countr = 0;
+uint64_t quartMillis = 0;
 
-uint64_t halfMillis = 0;
-
-
+// Timer interupt for runtime calc
 ISR(TIM0_OVF_vect) {
-  halfMillis++;
-  //countr++;
+  quartMillis++;
   //PORTB ^= _BV(LEDW); // toggle LED pin
 }
+
+//ISR(INT0_vect)
 
 struct pixel {
   uint8_t g;
@@ -33,28 +32,40 @@ struct pixel {
   uint8_t b;
 } pixels[PIXEL_NUM];
 
+void inline enableLed() {
+  PORTB |= _BV(ALEDEN);
+  PORTB &= ~_BV(ALED);
+  _delay_ms(10);
+}
+
+void inline disableLed() {
+  PORTB &= ~_BV(ALEDEN);
+  PORTB |= _BV(ALED);
+}
+
+
+
 
 int main(void) {
   DDRB |= _BV(LEDW) | _BV(LEDA) | _BV(ALED) | _BV(ALEDEN);
   PORTB |= (_BV(LEDW) | _BV(LEDA) | _BV(ALEDEN));
 
+  //Aled
+  enableLed();
   //struct pixel p = { 0, 10, 0 };
-
 
   //mode
   uint8_t mode = 0;
 
   //pwm
-  uint8_t ch0, ch1;
+  uint8_t ch0 = 0, ch1 = 0;
   pwm_init();
   pwm_set_frequency(N_8);
-  pwm_set_duty0inv(0);
-  pwm_set_duty1inv(0);
-
+  pwm_set_duty0inv(ch0);
+  pwm_set_duty1inv(ch1);
 
   //adc
-  adc_init();
-  uint16_t data = 0;
+  //adc_init();
 
   //flashing
   TIMSK0 |= _BV(TOIE0);  // enable Timer Overflow interrupt
@@ -62,45 +73,74 @@ int main(void) {
   uint8_t flashcounter = 0;
   uint64_t lastflash = 0;
   uint16_t doubleinterval = 40;  //~10ms
-
+  struct pixel color = { 0, 0, 0 };
 
 
   /* loop */
   while (1) {
 
-    if (halfMillis - lastflash >= doubleinterval) {
-      lastflash = halfMillis;
+    mode = 5;
+    color = { RED };
+
+    if (quartMillis - lastflash >= doubleinterval) {
+      lastflash = quartMillis;
       flashcounter++;
       //PORTB |= _BV(ALEDEN);
     }
 
     //PORTB &= ~_BV(ALEDEN);
 
-    struct pixel p = { 0, 0, 0 };
+
 
     switch (mode) {
-      case 1:
+      case 5:
+        for (int i = 0; i < PIXEL_NUM; ++i)
+          pixels[i] = color;
+        ws2812_setleds((struct cRGB *)pixels, PIXEL_NUM);
+        break;
+      case 6:
+        switch (flashcounter) {
+          case 0:
+            for (int i = 0; i < PIXEL_NUM / 2; ++i)
+              pixels[i] = { RED };
+            for (int i = PIXEL_NUM / 2; i < PIXEL_NUM; ++i)
+              pixels[i] = { BLACK };
+            break;
+          case 5:
+            for (int i = 0; i < PIXEL_NUM / 2; ++i)
+              pixels[i] = { BLACK };
+            for (int i = PIXEL_NUM / 2; i < PIXEL_NUM; ++i)
+              pixels[i] = { RED };
+            break;
+          case 10:
+            flashcounter = -1;
+            break;
+        }
+        ws2812_setleds((struct cRGB *)pixels, PIXEL_NUM);
+        break;
+      case 7:
         switch (flashcounter) {
           case 0:
           case 9:
           case 18:
-            //p = {ORANGE};
+            color = { ORANGE };
             break;
           case 7:
           case 16:
           case 25:
-            p = { 0, 0, 0 };
+            color = { 0, 0, 0 };
             break;
           case 42:
             flashcounter = -1;
             break;
             break;
         }
+        for (int i = 0; i < PIXEL_NUM; ++i)
+          pixels[i] = color;
+        ws2812_setleds((struct cRGB *)pixels, PIXEL_NUM);
+        break;
     }
 
-    for (int i = 0; i < PIXEL_NUM; ++i)
-      pixels[i] = p;
-    ws2812_setleds((struct cRGB *)pixels, PIXEL_NUM);
 
     //ALED Turn off
     /*PORTB &= ~_BV(ALED);

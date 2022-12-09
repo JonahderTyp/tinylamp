@@ -1,0 +1,5 @@
+
+== Input Specification
+
+DC 4.5V - 8V  1A +
+(Charge Chip: TP4056)

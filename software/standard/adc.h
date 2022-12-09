@@ -31,7 +31,7 @@ void inline adc_wait() {
     ;
 }
 
-uint16_t adc_readB(void) {
+uint16_t adc_read(void) {
   adc_startConversion();
   adc_wait();
   return adc_getReading();

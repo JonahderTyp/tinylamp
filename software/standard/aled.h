@@ -32,8 +32,6 @@ void inline ws2812_setleds(struct cRGB *ledarray, uint16_t leds) {
   ws2812_setleds_pin(ledarray, leds, _BV(ws2812_pin));
 }
 
-
-
 // Setleds for SK6812RGBW
 void inline ws2812_setleds_rgbw(struct cRGBW *ledarray, uint16_t leds) {
   ws2812_sendarray_mask((uint8_t *)ledarray, leds << 2, _BV(ws2812_pin));
