@@ -12,6 +12,7 @@ PCB/*.tmp
 PCB/*-save.pro
 PCB/*-save.kicad_pcb
 PCB/fp-info-cache
+PCB/#*
 
 # Netlist files (exported from Eeschema)
 PCB/*.net

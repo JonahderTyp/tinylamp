@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -349,7 +349,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "headlamp.kicad_pro",
+    "filename": "tinyLamp.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -389,7 +389,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 30,
     "drawing": {
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
@@ -430,6 +430,18 @@
     [
       "5c9dc50e-a543-47e5-b88f-47a3c3ba2e43",
       ""
+    ],
+    [
+      "05c6fccd-44bf-4e36-8da6-0c9e1c7a9497",
+      "RGBleds"
+    ],
+    [
+      "43adebd5-ae52-45f4-9a7c-0497c81b18b9",
+      "ledO"
+    ],
+    [
+      "c94d4f6a-8571-43e5-beb0-0bda676bd2f5",
+      "ledW"
     ]
   ],
   "text_variables": {}
