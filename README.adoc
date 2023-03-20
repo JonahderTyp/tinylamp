@@ -10,6 +10,10 @@ The tinylamp is a small Headlamp using an ATtiny processor. It is Specifically d
 A headlamp specifically designed for scouts
 
 
+== Overview
+
+image::doc/UserManual/pages/figures/case.png[alt]
+
 == Design Decisions:
 
 === Why Mini-Usb?
