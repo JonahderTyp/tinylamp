@@ -334,184 +334,6 @@
 				)
 			)
 		)
-		(symbol "Device:Q_NPN_BCE"
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Q_NPN_BCE"
-				(at 5.08 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "NPN transistor, base/collector/emitter"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "transistor NPN"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Q_NPN_BCE_0_1"
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Q_NPN_BCE_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 5.715)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -1256,6 +1078,208 @@
 				)
 			)
 		)
+		(symbol "Transistor_BJT:BC547"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "BC547"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN Transistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO?92*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BC547_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BC547_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 5.08)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_numbers hide)
@@ -1594,160 +1618,136 @@
 		)
 	)
 	(junction
-		(at 240.03 142.24)
+		(at 33.02 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "006a3fcb-183f-4263-b3b4-6750bf32de64")
+		(uuid "1f9277d2-caf0-4a4f-85bb-5043055befbb")
 	)
 	(junction
-		(at 175.26 134.62)
+		(at 203.2 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "07e0ca02-e32d-49bf-be0e-66cf18a1f20c")
+		(uuid "2c672ab2-9a8d-4409-9100-629bb0888e74")
 	)
 	(junction
-		(at 227.33 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "17435d0e-c97b-4a71-91e2-06d7f4a87944")
-	)
-	(junction
-		(at 193.04 134.62)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "17e92b49-7991-4ed0-96bc-7133879d3141")
-	)
-	(junction
-		(at 227.33 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2fc70a98-9edf-4ea9-89e8-95ff677b92c9")
-	)
-	(junction
-		(at 219.71 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3251d073-f0f6-4ce5-ad35-7ac6c2382375")
-	)
-	(junction
-		(at 229.87 52.07)
+		(at 172.72 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "33f310bd-0c49-488f-a631-b260217f08bb")
 	)
 	(junction
-		(at 254 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39cf5201-c838-4204-b64b-585954ace391")
-	)
-	(junction
-		(at 250.19 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3bce50e7-9b92-4ce7-a143-1201bcf3ef89")
-	)
-	(junction
-		(at 222.25 52.07)
+		(at 165.1 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3d77a6b1-fa14-4c09-b4c4-d62e75bb7d73")
 	)
 	(junction
-		(at 238.76 124.46)
+		(at 39.37 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "40cd4305-2576-4ef8-a4cf-c150e9c4f389")
+		(uuid "3e653b30-a8a9-4edb-bf07-f5dd9f0b2fec")
 	)
 	(junction
-		(at 188.595 123.19)
+		(at 33.02 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4779d937-3604-4ff4-a847-559aaaaedb91")
+		(uuid "55141410-4021-4fcd-aade-19b094586b8c")
 	)
 	(junction
-		(at 179.705 123.19)
+		(at 187.96 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4db21a6a-f15d-4a9d-9baa-0b09541e1ec7")
+		(uuid "5f3683cd-7701-4857-a177-5dce2ccca2b2")
 	)
 	(junction
-		(at 219.71 124.46)
+		(at 203.2 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "539de778-b219-4d22-8f18-066e7ba0ec6d")
+		(uuid "6b40c187-6044-490a-b044-8bd40693df63")
 	)
 	(junction
-		(at 223.52 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6359e297-e472-464e-8db7-4196c6b9d9d2")
-	)
-	(junction
-		(at 184.15 123.19)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68ed337c-63b2-4485-870f-997204eb08f5")
-	)
-	(junction
-		(at 184.15 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8a32ee06-c8f8-4ef3-a211-831d9d7fabc8")
-	)
-	(junction
-		(at 229.87 31.75)
+		(at 172.72 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "93a1f1d3-f3dd-44f3-80b2-a77ee1d0f1b3")
 	)
 	(junction
-		(at 242.57 124.46)
+		(at 187.96 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "93b201b8-8d8d-4cea-a772-9fba21204e97")
+		(uuid "94cf71d2-899e-4ee1-b1de-b3ef70535722")
 	)
 	(junction
-		(at 257.81 124.46)
+		(at 95.25 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a116ac95-2ce4-4068-b633-08358417686f")
+		(uuid "a3d1f5c6-ef70-4a7f-ad4b-daadcc39fea6")
 	)
 	(junction
-		(at 257.81 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a67becb3-66a5-4063-99b6-ec6105f32761")
-	)
-	(junction
-		(at 234.95 124.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "acd7f8f0-2ba8-4e5b-9e2c-7e54617caaf7")
-	)
-	(junction
-		(at 214.63 31.75)
+		(at 157.48 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aeef0838-2489-4e41-9fa3-b51b326602e9")
 	)
 	(junction
-		(at 222.25 31.75)
+		(at 95.25 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b456affc-b516-4233-a499-d19e70461100")
+	)
+	(junction
+		(at 83.82 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5c9ee3e-767c-4391-a825-7d4059f75f12")
+	)
+	(junction
+		(at 44.45 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd9a9441-aaee-446c-9343-b4fb951b9a5e")
+	)
+	(junction
+		(at 165.1 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf9d3ca9-b155-4246-ab80-6f1ee504c29c")
 	)
 	(junction
-		(at 214.63 52.07)
+		(at 39.37 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc0a351b-2dd2-4601-9388-8b8a8c68f8cf")
+	)
+	(junction
+		(at 44.45 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1c077df-4a4b-48f2-af75-b249d5baacf4")
+	)
+	(junction
+		(at 157.48 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e3902b56-fdf3-409a-ae62-0708af652d64")
 	)
 	(junction
-		(at 250.19 124.46)
+		(at 90.17 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e958712e-9890-4ee8-91e9-04ad9519aeaf")
+		(uuid "e6e8792f-b996-4fa4-92b2-7990428a693a")
+	)
+	(junction
+		(at 90.17 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f216f6ca-5975-43f9-be0e-d2a63c60838e")
+	)
+	(junction
+		(at 83.82 138.43)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb73c985-8687-4229-8c27-afc90bd78205")
 	)
 	(no_connect
 		(at 129.54 69.85)
@@ -1783,17 +1783,17 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 132.08) (xy 242.57 133.35)
+			(xy 44.45 156.21) (xy 44.45 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "01ff7723-45a2-40db-bb26-9d103d64f23e")
+		(uuid "01d4e112-7981-4f9a-b7b5-1b405e0dc48e")
 	)
 	(wire
 		(pts
-			(xy 199.39 35.56) (xy 199.39 31.75)
+			(xy 142.24 142.24) (xy 142.24 138.43)
 		)
 		(stroke
 			(width 0)
@@ -1803,53 +1803,13 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 124.46) (xy 238.76 124.46)
+			(xy 95.25 138.43) (xy 106.68 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "05526a38-81e3-452b-9a8b-5505a83cba67")
-	)
-	(wire
-		(pts
-			(xy 188.595 124.46) (xy 188.595 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05b13b07-c991-48aa-a4a2-e6b95e6bc50e")
-	)
-	(wire
-		(pts
-			(xy 219.71 132.08) (xy 219.71 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "083305aa-9b55-48bf-b7c7-502408b14138")
-	)
-	(wire
-		(pts
-			(xy 188.595 134.62) (xy 193.04 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0af747b8-c9ea-428e-82c2-6314445694d4")
-	)
-	(wire
-		(pts
-			(xy 254 133.35) (xy 257.81 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0c2c4dbb-c02f-45bc-b7f8-c0c01c202c12")
+		(uuid "09717aa7-e143-4aa5-97ec-016b6cefe357")
 	)
 	(wire
 		(pts
@@ -1863,17 +1823,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 124.46) (xy 227.33 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e8418d3-3317-44c6-b6f2-c6e920f79fd7")
-	)
-	(wire
-		(pts
-			(xy 214.63 31.75) (xy 214.63 35.56)
+			(xy 157.48 138.43) (xy 157.48 142.24)
 		)
 		(stroke
 			(width 0)
@@ -1883,37 +1833,57 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 133.35) (xy 250.19 133.35)
+			(xy 95.25 156.21) (xy 95.25 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "189bbfb0-c5d2-42cd-bb36-7e3d5f58c54a")
+		(uuid "10a6ee06-51ac-4386-8670-ed33d4eb3553")
 	)
 	(wire
 		(pts
-			(xy 175.26 142.24) (xy 184.15 142.24)
+			(xy 83.82 158.75) (xy 90.17 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1de9ea1b-5d7b-46a9-98c5-1c875ccf8301")
+		(uuid "10c78569-d436-422e-8559-9f720d89be52")
 	)
 	(wire
 		(pts
-			(xy 265.43 133.35) (xy 265.43 132.08)
+			(xy 44.45 158.75) (xy 55.88 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "201cddd1-3a30-4daf-a9c5-857b0ce955b2")
+		(uuid "19f20bdb-23a6-4a7e-8c82-a1c6d2d439f6")
 	)
 	(wire
 		(pts
-			(xy 229.87 35.56) (xy 229.87 31.75)
+			(xy 83.82 138.43) (xy 83.82 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c69626c-8e3a-4a73-87dd-392bce835a48")
+	)
+	(wire
+		(pts
+			(xy 95.25 138.43) (xy 95.25 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20181fc4-004d-447e-997b-04104785cf0a")
+	)
+	(wire
+		(pts
+			(xy 172.72 142.24) (xy 172.72 138.43)
 		)
 		(stroke
 			(width 0)
@@ -1923,7 +1893,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 43.18) (xy 182.88 43.18)
+			(xy 123.19 149.86) (xy 125.73 149.86)
 		)
 		(stroke
 			(width 0)
@@ -1933,73 +1903,53 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 124.46) (xy 257.81 124.46)
+			(xy 33.02 158.75) (xy 39.37 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "27cf6bf2-95f2-4c4e-b41c-5a37d20e7ce1")
+		(uuid "27544587-e546-43f1-acd8-bde3119ae726")
 	)
 	(wire
 		(pts
-			(xy 238.76 124.46) (xy 242.57 124.46)
+			(xy 71.12 158.75) (xy 83.82 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "28e52b9f-07ab-4a03-b678-308a8df46f1c")
+		(uuid "3db9aa7d-fc53-451a-94bd-990770bb7f47")
 	)
 	(wire
 		(pts
-			(xy 257.81 132.08) (xy 257.81 133.35)
+			(xy 39.37 158.75) (xy 44.45 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2ff3d0e5-d784-484a-8fec-f372f78b4d64")
+		(uuid "3f18e83b-bb50-4cd0-8402-2ca8aa19d1a7")
 	)
 	(wire
 		(pts
-			(xy 170.815 134.62) (xy 175.26 134.62)
+			(xy 71.12 138.43) (xy 83.82 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3a352143-92a7-4d33-a8c3-8e2dc8bf1059")
+		(uuid "41f78857-f57b-47b0-aa64-fc77b5115bca")
 	)
 	(wire
 		(pts
-			(xy 227.33 132.08) (xy 227.33 133.35)
+			(xy 90.17 158.75) (xy 90.17 160.02)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "41259f25-53f1-416b-a45b-d52520edc789")
-	)
-	(wire
-		(pts
-			(xy 184.15 123.19) (xy 188.595 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46da9970-5c9c-4bd2-8bd3-b0daafdfa193")
-	)
-	(wire
-		(pts
-			(xy 242.57 124.46) (xy 250.19 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b6076ea-9ed4-45fe-8da1-71c30939df1d")
+		(uuid "4c5e6f8c-96dc-4bbf-a7c7-17e11cb4b31a")
 	)
 	(wire
 		(pts
@@ -2013,27 +1963,37 @@
 	)
 	(wire
 		(pts
-			(xy 254 142.24) (xy 254 140.97)
+			(xy 33.02 156.21) (xy 33.02 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "54c0f953-29e2-4275-8ab0-4c2baa8f2948")
+		(uuid "50b3e097-faf6-4ff6-b5fc-bf33fec62b85")
 	)
 	(wire
 		(pts
-			(xy 240.03 142.24) (xy 254 142.24)
+			(xy 203.2 142.24) (xy 203.2 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5d05a9e0-2cb8-46df-9c70-d73ae9656661")
+		(uuid "51809b89-2ad3-4892-b033-d2bf3f3f98db")
 	)
 	(wire
 		(pts
-			(xy 199.39 31.75) (xy 214.63 31.75)
+			(xy 71.12 156.21) (xy 71.12 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57f789b6-d1d1-4e3f-95ca-9dbf64a52d3e")
+	)
+	(wire
+		(pts
+			(xy 142.24 138.43) (xy 157.48 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2043,7 +2003,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 52.07) (xy 214.63 52.07)
+			(xy 142.24 158.75) (xy 157.48 158.75)
 		)
 		(stroke
 			(width 0)
@@ -2053,23 +2013,83 @@
 	)
 	(wire
 		(pts
-			(xy 170.815 123.19) (xy 179.705 123.19)
+			(xy 83.82 138.43) (xy 90.17 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "623e9a1e-b789-4b5e-8d55-3771c8db6abb")
+		(uuid "6244d383-190f-4446-90cd-a8231ca32e94")
 	)
 	(wire
 		(pts
-			(xy 250.19 132.08) (xy 250.19 133.35)
+			(xy 218.44 158.75) (xy 218.44 157.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7f11b32b-2a75-4667-aa7f-f121d0f3a926")
+		(uuid "692ce113-1c74-40af-abc1-bbd185eca499")
+	)
+	(wire
+		(pts
+			(xy 55.88 156.21) (xy 55.88 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cbeaacd-2edb-4ec2-970f-a4f3df6bec81")
+	)
+	(wire
+		(pts
+			(xy 44.45 138.43) (xy 44.45 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e3da94e-0b8c-46d6-87cd-dcca7809ccc4")
+	)
+	(wire
+		(pts
+			(xy 33.02 138.43) (xy 39.37 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72d116c5-f939-4d18-b0df-a818f6d28e43")
+	)
+	(wire
+		(pts
+			(xy 39.37 158.75) (xy 39.37 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "760d9465-257a-450c-a65e-f591c69901d5")
+	)
+	(wire
+		(pts
+			(xy 44.45 138.43) (xy 55.88 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e442a31-81ce-4af5-b3a5-018441842fa9")
+	)
+	(wire
+		(pts
+			(xy 203.2 158.75) (xy 203.2 157.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "876506e8-245e-464d-8cc8-43a367455402")
 	)
 	(wire
 		(pts
@@ -2083,17 +2103,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.705 132.08) (xy 179.705 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ba3d679-f4c7-49d9-894d-4b4b88d971a3")
-	)
-	(wire
-		(pts
-			(xy 245.11 52.07) (xy 245.11 50.8)
+			(xy 187.96 158.75) (xy 187.96 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2103,7 +2113,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 52.07) (xy 214.63 50.8)
+			(xy 157.48 158.75) (xy 157.48 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2113,53 +2123,43 @@
 	)
 	(wire
 		(pts
-			(xy 170.815 124.46) (xy 170.815 123.19)
+			(xy 90.17 138.43) (xy 95.25 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "928c6f1e-d5cd-484e-8010-740742a47847")
+		(uuid "9236bdc1-c1c6-49d0-9be6-d8d9a304dee8")
 	)
 	(wire
 		(pts
-			(xy 197.485 134.62) (xy 193.04 134.62)
+			(xy 203.2 158.75) (xy 218.44 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "929f6457-0d34-4f36-ae2b-7d77a3cab684")
+		(uuid "94602b40-07db-4f71-9a17-e9a3ca74fd24")
 	)
 	(wire
 		(pts
-			(xy 222.25 52.07) (xy 229.87 52.07)
+			(xy 187.96 158.75) (xy 203.2 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97fc0e93-df89-4be5-ade6-c0b325e38cda")
+	)
+	(wire
+		(pts
+			(xy 165.1 158.75) (xy 172.72 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "99d484e4-5cd7-4256-a970-b242b950c0ed")
-	)
-	(wire
-		(pts
-			(xy 212.09 133.35) (xy 219.71 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cd3f6dd-137a-4f19-a472-61aeb7ea4043")
-	)
-	(wire
-		(pts
-			(xy 250.19 133.35) (xy 254 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a07f556a-42eb-4a2c-bcf5-4dae3668d150")
 	)
 	(wire
 		(pts
@@ -2173,17 +2173,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.705 123.19) (xy 179.705 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a111ec14-1231-4846-a710-05e0908dd791")
-	)
-	(wire
-		(pts
-			(xy 214.63 52.07) (xy 222.25 52.07)
+			(xy 157.48 158.75) (xy 165.1 158.75)
 		)
 		(stroke
 			(width 0)
@@ -2193,37 +2183,47 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 142.24) (xy 240.03 142.24)
+			(xy 20.32 158.75) (xy 33.02 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a639b3c5-1dc9-4c50-bce8-8ce124121365")
+		(uuid "ad27be44-44d6-4d7c-be31-6f4fb4ca2b26")
 	)
 	(wire
 		(pts
-			(xy 212.09 124.46) (xy 219.71 124.46)
+			(xy 55.88 138.43) (xy 55.88 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b490781f-2470-4706-bbfe-053f977056ce")
+		(uuid "b29a88d8-d583-44c7-b607-04589a078c4e")
 	)
 	(wire
 		(pts
-			(xy 184.15 142.24) (xy 184.15 147.32)
+			(xy 71.12 140.97) (xy 71.12 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b59b3083-d7b2-4074-b523-8450a7c2ed86")
+		(uuid "b5e1e7be-ec92-4abe-9f72-95360fe88834")
 	)
 	(wire
 		(pts
-			(xy 229.87 52.07) (xy 245.11 52.07)
+			(xy 20.32 156.21) (xy 20.32 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b86959b8-132a-45e0-b3b5-615f745eefb9")
+	)
+	(wire
+		(pts
+			(xy 172.72 158.75) (xy 187.96 158.75)
 		)
 		(stroke
 			(width 0)
@@ -2233,7 +2233,17 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 31.75) (xy 222.25 31.75)
+			(xy 33.02 138.43) (xy 33.02 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb2c8c7a-43ce-4999-b513-2792268f7844")
+	)
+	(wire
+		(pts
+			(xy 157.48 138.43) (xy 165.1 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2243,27 +2253,7 @@
 	)
 	(wire
 		(pts
-			(xy 197.485 123.19) (xy 197.485 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc41e562-9111-44e1-a8e9-165f4520cb98")
-	)
-	(wire
-		(pts
-			(xy 234.95 133.35) (xy 234.95 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0589ebb-db46-4e4b-b900-47f45283242a")
-	)
-	(wire
-		(pts
-			(xy 229.87 52.07) (xy 229.87 50.8)
+			(xy 172.72 158.75) (xy 172.72 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2273,57 +2263,17 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 142.24) (xy 240.03 146.05)
+			(xy 203.2 138.43) (xy 218.44 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c190e945-a9a4-4254-bb69-f23e4cb2af57")
+		(uuid "ce1842f0-d2dc-4dd1-a255-a2a3685cbc3d")
 	)
 	(wire
 		(pts
-			(xy 257.81 133.35) (xy 265.43 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c410fab8-5032-4c80-b73a-1877348a0d7b")
-	)
-	(wire
-		(pts
-			(xy 223.52 133.35) (xy 227.33 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd56d0f6-5192-462a-82aa-5a2902c51de0")
-	)
-	(wire
-		(pts
-			(xy 227.33 133.35) (xy 234.95 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ce2dfca8-65ac-47c9-a638-740e9df1343f")
-	)
-	(wire
-		(pts
-			(xy 219.71 133.35) (xy 223.52 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d05c5faa-198d-4dd8-b1cf-ce9b3ffad4ac")
-	)
-	(wire
-		(pts
-			(xy 222.25 31.75) (xy 229.87 31.75)
+			(xy 165.1 138.43) (xy 172.72 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2333,17 +2283,37 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 132.08) (xy 212.09 133.35)
+			(xy 95.25 158.75) (xy 106.68 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d10517a9-7193-4d81-8610-f116a41f66c3")
+		(uuid "d1d31d13-5dda-44cd-809f-837a4d424f70")
 	)
 	(wire
 		(pts
-			(xy 229.87 31.75) (xy 245.11 31.75)
+			(xy 20.32 140.97) (xy 20.32 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d45157fe-c0fb-423d-98d5-4cd0154f4428")
+	)
+	(wire
+		(pts
+			(xy 106.68 156.21) (xy 106.68 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4816a88-ab12-4bc0-992f-197715d37427")
+	)
+	(wire
+		(pts
+			(xy 172.72 138.43) (xy 187.96 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2353,17 +2323,7 @@
 	)
 	(wire
 		(pts
-			(xy 179.705 123.19) (xy 184.15 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d846686c-a410-4ea2-96cd-8cca160b0c20")
-	)
-	(wire
-		(pts
-			(xy 190.5 43.18) (xy 191.77 43.18)
+			(xy 133.35 149.86) (xy 134.62 149.86)
 		)
 		(stroke
 			(width 0)
@@ -2373,27 +2333,7 @@
 	)
 	(wire
 		(pts
-			(xy 197.485 132.08) (xy 197.485 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbaf37ba-dd9a-4659-aa39-fd8a7f23b27e")
-	)
-	(wire
-		(pts
-			(xy 227.33 124.46) (xy 234.95 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd2f186b-0893-4a8c-8966-a533397026c9")
-	)
-	(wire
-		(pts
-			(xy 199.39 52.07) (xy 199.39 50.8)
+			(xy 142.24 158.75) (xy 142.24 157.48)
 		)
 		(stroke
 			(width 0)
@@ -2403,43 +2343,33 @@
 	)
 	(wire
 		(pts
-			(xy 170.815 132.08) (xy 170.815 134.62)
+			(xy 187.96 138.43) (xy 203.2 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e08e9f25-dbf7-4a0b-aedb-f7a35a5c7f82")
+		(uuid "e5a3e778-9d46-4152-b758-e8ab3ddc3793")
 	)
 	(wire
 		(pts
-			(xy 223.52 140.97) (xy 223.52 142.24)
+			(xy 83.82 156.21) (xy 83.82 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ea61ede0-bcb7-425b-8702-253a918bdbe0")
+		(uuid "e6473229-049b-4d61-9bb2-669b23513c16")
 	)
 	(wire
 		(pts
-			(xy 188.595 123.19) (xy 197.485 123.19)
+			(xy 39.37 138.43) (xy 44.45 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f0df89b8-9fc6-499a-aa9b-4070270de435")
-	)
-	(wire
-		(pts
-			(xy 257.81 124.46) (xy 265.43 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f32d981e-caa9-4b73-ac2f-c674f6ef5267")
+		(uuid "f11965dd-739f-461e-8b4b-a4a9efe34345")
 	)
 	(wire
 		(pts
@@ -2463,23 +2393,23 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 142.24) (xy 193.04 142.24)
+			(xy 218.44 138.43) (xy 218.44 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f8589357-5acf-4967-b284-f89ffb7ffb70")
+		(uuid "f7732922-753e-4d75-af5c-a7adf4e1f52f")
 	)
 	(wire
 		(pts
-			(xy 179.705 134.62) (xy 175.26 134.62)
+			(xy 106.68 138.43) (xy 106.68 140.97)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f8a68a92-6428-4a32-b36c-fab01eac56d7")
+		(uuid "f9cf290e-fa56-48e2-a7c9-66dcc717b0c8")
 	)
 	(wire
 		(pts
@@ -2493,13 +2423,23 @@
 	)
 	(wire
 		(pts
-			(xy 188.595 132.08) (xy 188.595 134.62)
+			(xy 20.32 138.43) (xy 33.02 138.43)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fccbbe04-61c5-498f-9b67-b953e85ff273")
+		(uuid "fdd25f8e-be52-40a2-b082-c63b8cd6301f")
+	)
+	(wire
+		(pts
+			(xy 90.17 158.75) (xy 95.25 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe4726bd-295e-403b-9307-5f6f6d71577a")
 	)
 	(wire
 		(pts
@@ -2513,13 +2453,25 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 31.75) (xy 245.11 35.56)
+			(xy 187.96 138.43) (xy 187.96 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "fea7ee5e-b57e-42a3-8a52-64dd6952e234")
+	)
+	(hierarchical_label "LEDW"
+		(shape input)
+		(at 24.13 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "877533db-6335-435c-8b89-02c6f8a45e46")
 	)
 	(hierarchical_label "LEDA"
 		(shape output)
@@ -2533,21 +2485,9 @@
 		)
 		(uuid "915dc83a-49ab-41b5-8faf-e0abb7869db0")
 	)
-	(hierarchical_label "LEDO"
-		(shape input)
-		(at 232.41 151.13 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "96677669-b893-44b4-99ec-f0197abebb5c")
-	)
 	(hierarchical_label "LEDA"
 		(shape input)
-		(at 180.34 43.18 180)
+		(at 123.19 149.86 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2570,6 +2510,18 @@
 		(uuid "bb1468d1-af09-4040-93d4-bb658f0051e4")
 	)
 	(hierarchical_label "LEDO"
+		(shape input)
+		(at 74.93 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ca338a72-78f6-4b82-b358-ea7f126dd89b")
+	)
+	(hierarchical_label "LEDO"
 		(shape output)
 		(at 129.54 64.77 0)
 		(fields_autoplaced yes)
@@ -2581,172 +2533,18 @@
 		)
 		(uuid "db86d833-0c21-44d1-b5bf-54b2614a46f2")
 	)
-	(hierarchical_label "LEDW"
-		(shape input)
-		(at 176.53 152.4 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "fd793b6c-24ea-4411-a3ad-76602fd11bd2")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 240.03 156.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "11cd206a-f263-42aa-b5ee-2bb1fcc306ec")
-		(property "Reference" "#PWR015"
-			(at 240.03 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 240.03 160.655 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 240.03 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 240.03 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 240.03 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "462c5e35-e0de-4237-8832-f788d9352e34")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 242.57 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "199a6b5d-5c01-4dc3-81bc-5fc02d10cd4d")
-		(property "Reference" "D15"
-			(at 240.03 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDA"
-			(at 245.11 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 242.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 242.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 242.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.017"
-			(at 242.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c2670993-1a39-48bf-996c-b4be34b314e4")
-		)
-		(pin "2"
-			(uuid "a54208ff-10a1-440a-9b58-b588210678c6")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D15")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 184.15 123.19 0)
+		(at 90.17 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1ab0c4ff-1df5-4287-ab4a-6830b8430766")
-		(property "Reference" "#PWR014"
-			(at 184.15 127 0)
+		(uuid "077d95c4-99c0-4e2a-aecc-5a0aaba8b63c")
+		(property "Reference" "#PWR017"
+			(at 90.17 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2755,7 +2553,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 184.15 118.11 0)
+			(at 90.17 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2763,7 +2561,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 123.19 0)
+			(at 90.17 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2772,7 +2570,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 123.19 0)
+			(at 90.17 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2781,7 +2579,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 184.15 123.19 0)
+			(at 90.17 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2790,12 +2588,236 @@
 			)
 		)
 		(pin "1"
-			(uuid "536f7ade-0aff-428c-82bb-97fc9f53547e")
+			(uuid "02c9b237-bb2f-440d-89cb-74c3ceb0ad16")
 		)
 		(instances
-			(project ""
+			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR014")
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 90.17 163.83 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0950c725-5af1-4e78-ab07-bd3948526092")
+		(property "Reference" "R14"
+			(at 92.71 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "110R"
+			(at 92.71 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 91.948 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
+			(at 90.17 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0021"
+			(at 90.17 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7c6ce88-9a68-4fd2-a1cf-b95e6426a0b9")
+		)
+		(pin "2"
+			(uuid "3a1ad801-e6cd-47bd-ac7f-f2519c5f3234")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:WS2812B")
+		(at 218.44 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0e2f14ec-74b0-49c2-ba90-51864a054aa9")
+		(property "Reference" "D32"
+			(at 223.52 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 223.52 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 219.71 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 220.98 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 218.44 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9b266680-684f-4a40-b53f-851cd98b1113")
+		)
+		(pin "1"
+			(uuid "dd655d6c-9d23-429c-b462-06ba3220ba12")
+		)
+		(pin "2"
+			(uuid "59c914de-78e9-4df0-bbc7-1d51b9d2e0d2")
+		)
+		(pin "4"
+			(uuid "9313ca28-aa09-4a3b-b8ae-87281d6ab4ed")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 106.68 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "11f1859f-178a-44a2-ae4f-68d3760d1e56")
+		(property "Reference" "D25"
+			(at 110.49 145.0974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_O"
+			(at 110.49 147.6374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 106.68 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 106.68 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "00c3f878-dffb-4fe9-9f67-fa32a46a9026")
+		)
+		(pin "1"
+			(uuid "4fe30505-34cd-48b8-9971-253abbb97ae1")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -2811,7 +2833,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1dc9a3c3-aa76-4316-8795-ce3368049d88")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR021"
 			(at 121.92 43.18 0)
 			(effects
 				(font
@@ -2861,7 +2883,7 @@
 		(instances
 			(project ""
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR012")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -2869,15 +2891,15 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B")
-		(at 229.87 43.18 0)
+		(at 172.72 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "239c86d3-231f-4870-9c85-267240003613")
-		(property "Reference" "D25"
-			(at 234.95 34.29 0)
+		(property "Reference" "D29"
+			(at 177.8 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2885,7 +2907,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 234.95 36.83 0)
+			(at 177.8 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2893,7 +2915,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 231.14 50.8 0)
+			(at 173.99 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2903,7 +2925,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 232.41 52.705 0)
+			(at 175.26 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2913,7 +2935,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller"
-			(at 229.87 43.18 0)
+			(at 172.72 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2936,51 +2958,42 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D25")
+					(reference "D29")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NPN_BCE")
-		(at 237.49 151.13 0)
+		(lib_id "Device:LED")
+		(at 95.25 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "262f064c-7617-4be4-b45b-4cf5d1c83f57")
-		(property "Reference" "Q11"
-			(at 243.205 149.8599 0)
+		(uuid "287be16a-a106-43e9-99f2-c561bb41cb44")
+		(property "Reference" "D24"
+			(at 99.06 152.7174 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "Q_NPN_BCE"
-			(at 243.205 152.3999 0)
+		(property "Value" "LED_O"
+			(at 99.06 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 242.57 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_TWGMC-S9013_C727139.html"
-			(at 237.49 151.13 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 95.25 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2988,8 +3001,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 237.49 151.13 0)
+		(property "Datasheet" "~"
+			(at 95.25 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2997,23 +3010,166 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.007"
-			(at 237.49 151.13 0)
+		(property "Description" "Light emitting diode"
+			(at 95.25 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "42967376-66b1-4b43-b174-b82c00f5c9b0")
 		)
 		(pin "2"
-			(uuid "be1dfdd2-6013-415d-b618-6fb9af9b4689")
+			(uuid "14b0a700-4b21-40e9-9fe7-3e0c981d8c5f")
+		)
+		(pin "1"
+			(uuid "f79163d8-143d-424b-b3f8-6c1b418affea")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 33.02 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f393727-c65c-41c0-b8c6-87c4625df82c")
+		(property "Reference" "D13"
+			(at 36.83 145.0974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_W"
+			(at 36.83 147.6374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 33.02 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 33.02 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bdc838d0-f666-4c4c-a12f-7d34a4971ef4")
+		)
+		(pin "1"
+			(uuid "cb421ac3-efe0-42f8-a79d-7336997fbfa4")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC547")
+		(at 36.83 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32284094-0dfb-4642-aac8-8947f91a429c")
+		(property "Reference" "Q11"
+			(at 41.91 171.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC547"
+			(at 41.91 173.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder"
+			(at 41.91 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(at 36.83 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+			(at 36.83 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d14726b2-1935-454d-a8a2-55f3272165f0")
 		)
 		(pin "3"
-			(uuid "ae2e16be-b717-4102-b494-3d9f04c47dfc")
+			(uuid "c105e27b-d7da-4835-bdbf-e6e04497dca3")
+		)
+		(pin "1"
+			(uuid "76f28992-fcac-447c-b851-7f34616fc0b2")
 		)
 		(instances
 			(project "tinyLamp"
@@ -3025,150 +3181,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 219.71 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2e19b248-c5f2-461e-a5af-bbd87ddf274a")
-		(property "Reference" "D12"
-			(at 217.17 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDA"
-			(at 222.25 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 219.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 219.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.017"
-			(at 219.71 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73bf7501-a188-494e-a353-b8048d85cf39")
-		)
-		(pin "2"
-			(uuid "6170432e-b3b9-4a44-8e12-b76b8ddc0896")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 184.15 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "31aa3c6f-86e1-47fd-986c-99a738d11578")
-		(property "Reference" "#PWR017"
-			(at 184.15 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 184.15 161.925 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 184.15 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "76bf19a1-8fff-45fa-a2ea-e9cb69bdac26")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
-		(at 222.25 31.75 0)
+		(at 165.1 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3176,8 +3190,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "32920685-4310-43b8-b32f-d90e176b40e0")
-		(property "Reference" "#PWR019"
-			(at 222.25 35.56 0)
+		(property "Reference" "#PWR022"
+			(at 165.1 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3186,7 +3200,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 222.25 26.67 0)
+			(at 165.1 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3194,7 +3208,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 31.75 0)
+			(at 165.1 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3203,7 +3217,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 31.75 0)
+			(at 165.1 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3212,7 +3226,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 222.25 31.75 0)
+			(at 165.1 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3226,7 +3240,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR019")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -3258,7 +3272,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 22.86 25.4 0)
 			(effects
 				(font
@@ -3301,92 +3315,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 179.705 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3b7783f1-dcfd-4352-88dc-de27543d44b7")
-		(property "Reference" "D20"
-			(at 177.165 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDW"
-			(at 182.245 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2"
-			(at 179.705 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html"
-			(at 179.705 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 179.705 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.010"
-			(at 179.705 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ad3f948e-ee10-4d04-bfb1-0ea55e349357")
-		)
-		(pin "2"
-			(uuid "65fe28ff-126e-45ba-92f1-4702ca5a7992")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "LED:WS2812B")
-		(at 199.39 43.18 0)
+		(at 142.24 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "3d353821-562b-46a9-b9e7-53ebfae64fa6")
-		(property "Reference" "D23"
-			(at 204.724 34.29 0)
+		(property "Reference" "D27"
+			(at 147.574 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3394,7 +3332,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 204.724 36.83 0)
+			(at 147.574 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3402,7 +3340,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 200.66 50.8 0)
+			(at 143.51 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3412,7 +3350,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 201.93 52.705 0)
+			(at 144.78 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3422,7 +3360,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller"
-			(at 199.39 43.18 0)
+			(at 142.24 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3445,7 +3383,219 @@
 		(instances
 			(project ""
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D23")
+					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 106.68 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d6e21d1-9cb7-44e6-ae38-fedd0273f6c2")
+		(property "Reference" "D26"
+			(at 110.49 152.7174 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_O"
+			(at 110.49 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 106.68 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 106.68 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "165e699f-9734-456f-8290-39fd468cc0c3")
+		)
+		(pin "1"
+			(uuid "6837fb02-14e2-4948-aad2-039dd380f1e7")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:BC547")
+		(at 87.63 172.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "406f4af5-7f25-40c5-9660-5e4ead9c3c76")
+		(property "Reference" "Q12"
+			(at 92.71 171.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC547"
+			(at 92.71 173.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder"
+			(at 92.71 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
+			(at 87.63 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+			(at 87.63 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4b96fab2-2baa-4562-b27b-2b27e02e7b9d")
+		)
+		(pin "3"
+			(uuid "1ce350aa-5dc4-4e58-93ab-d2bb00d78cd7")
+		)
+		(pin "1"
+			(uuid "7403094a-53a4-4566-a47a-ef7f9b77fa09")
+		)
+		(instances
+			(project ""
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "Q12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 90.17 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "435a1283-9344-41bf-9a58-62e8616a2234")
+		(property "Reference" "#PWR018"
+			(at 90.17 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 182.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f1cac48-fd14-4fa1-a0d2-321e7d867c85")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -3461,7 +3611,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "435eaca2-ea40-415e-8da5-5c34d7535135")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR019"
 			(at 116.84 43.18 0)
 			(effects
 				(font
@@ -3511,7 +3661,7 @@
 		(instances
 			(project ""
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR011")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -3519,92 +3669,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 234.95 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4c03e659-90f1-49dc-9e91-41e6413f2d68")
-		(property "Reference" "D14"
-			(at 232.41 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDA"
-			(at 237.49 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 234.95 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 234.95 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 234.95 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.017"
-			(at 234.95 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "73c6067e-2936-463f-a403-587360723a96")
-		)
-		(pin "2"
-			(uuid "64d667bb-3ae2-4478-9c5d-c0cdb38439d3")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 193.04 138.43 180)
+		(at 95.25 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5060303a-9e3a-4d6f-af4b-a7a6aede5ea3")
-		(property "Reference" "R14"
-			(at 195.58 137.1599 0)
+		(uuid "57404a4e-6731-47c9-97a5-8492de285f46")
+		(property "Reference" "D23"
+			(at 99.06 145.0974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3612,8 +3686,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "15R"
-			(at 195.58 139.6999 0)
+		(property "Value" "LED_O"
+			(at 99.06 147.6374 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3621,8 +3695,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 194.818 138.43 90)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 95.25 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3630,8 +3704,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html"
-			(at 193.04 138.43 0)
+		(property "Datasheet" "~"
+			(at 95.25 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3639,100 +3713,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 193.04 138.43 0)
+		(property "Description" "Light emitting diode"
+			(at 95.25 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Price" "0.0021"
-			(at 193.04 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bbcf4e0d-8b44-4f7e-b64c-475d76b98e22")
 		)
 		(pin "2"
-			(uuid "962abf3f-fd65-4bfc-b442-410e9de6ff48")
+			(uuid "15d16652-396e-4d5e-81c3-0d3be3744cc9")
+		)
+		(pin "1"
+			(uuid "2c851206-f412-42fd-bc53-8a33348da080")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 238.76 124.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "54875533-8593-451e-87a9-ee59a34ae692")
-		(property "Reference" "#PWR016"
-			(at 238.76 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 238.76 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 238.76 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 238.76 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 238.76 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "965623b5-34df-46b1-b8a0-6503925a50b6")
-		)
-		(instances
-			(project ""
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR016")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -3740,40 +3739,34 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 197.485 128.27 90)
+		(at 20.32 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5893fa23-621b-4c60-9c4b-f577a21ae81e")
-		(property "Reference" "D22"
-			(at 194.945 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "64fdc945-684d-4861-bebd-a7715fbc91b6")
+		(property "Reference" "D11"
+			(at 24.13 145.0974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LEDW"
-			(at 200.025 128.27 0)
+		(property "Value" "LED_W"
+			(at 24.13 147.6374 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2"
-			(at 197.485 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html"
-			(at 197.485 128.27 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 20.32 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3781,8 +3774,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 197.485 128.27 0)
+		(property "Datasheet" "~"
+			(at 20.32 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3790,25 +3783,25 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.010"
-			(at 197.485 128.27 0)
+		(property "Description" "Light emitting diode"
+			(at 20.32 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "44d1a91d-70d4-4e9c-9d1a-d5fad51d853a")
 		)
 		(pin "2"
-			(uuid "094d69bf-32bf-41fc-b37b-267b881f4623")
+			(uuid "dbfef337-5701-4be7-8e88-bfabc27f134e")
+		)
+		(pin "1"
+			(uuid "01a407e1-0892-46ec-8000-4ab2d2d0ec12")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D22")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -3927,32 +3920,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 250.19 128.27 90)
+		(lib_id "power:GND")
+		(at 39.37 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "782ac2bc-068f-40ec-9481-2cf853697de9")
-		(property "Reference" "D16"
-			(at 247.65 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDA"
-			(at 252.73 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 250.19 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "71f07ab6-9cf3-4cbb-88d1-7caa8a09bf04")
+		(property "Reference" "#PWR014"
+			(at 39.37 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3960,8 +3938,25 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 250.19 128.27 0)
+		(property "Value" "GND"
+			(at 39.37 182.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3970,16 +3965,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 250.19 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.017"
-			(at 250.19 128.27 0)
+			(at 39.37 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3988,15 +3974,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "be61e380-e6b1-49c8-99b6-94a1883a5b0f")
-		)
-		(pin "2"
-			(uuid "5481fe14-5971-4dc7-8edf-9105e630c8b4")
+			(uuid "58278cd7-f9d3-4c2f-82bf-97dc98d7ee3d")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D16")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -4012,7 +3995,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7df64f7b-a46b-4cb3-b502-a877c91e7eeb")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR020"
 			(at 119.38 86.36 0)
 			(effects
 				(font
@@ -4062,7 +4045,7 @@
 		(instances
 			(project ""
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR013")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -4070,40 +4053,34 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 257.81 128.27 90)
+		(at 71.12 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7fa519d3-0849-4552-a067-fda748cac397")
-		(property "Reference" "D17"
-			(at 255.27 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "861b6a89-404e-4762-bdc0-7602ea9242ec")
+		(property "Reference" "D20"
+			(at 74.93 152.7174 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LEDA"
-			(at 260.35 128.27 0)
+		(property "Value" "LED_O"
+			(at 74.93 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 257.81 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 257.81 128.27 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 71.12 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4111,8 +4088,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 257.81 128.27 0)
+		(property "Datasheet" "~"
+			(at 71.12 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4120,25 +4097,25 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.017"
-			(at 257.81 128.27 0)
+		(property "Description" "Light emitting diode"
+			(at 71.12 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "1675c213-f15a-4c0b-9cc8-da713cce78e2")
 		)
 		(pin "2"
-			(uuid "1b23098f-9ea6-4694-8e4b-783a21933eb8")
+			(uuid "1cc762ef-9b0e-4738-9481-dc2e0e59a79e")
+		)
+		(pin "1"
+			(uuid "06f6d3bd-a472-42a8-bce3-651673b4ecc7")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D17")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -4146,40 +4123,34 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 227.33 128.27 90)
+		(at 44.45 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "842d9152-0599-41aa-8d87-b2b85ce3a208")
-		(property "Reference" "D13"
-			(at 224.79 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "8d77e1bc-73e4-4f86-8006-31fe09614700")
+		(property "Reference" "D15"
+			(at 48.26 145.0974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LEDA"
-			(at 229.87 128.27 0)
+		(property "Value" "LED_W"
+			(at 48.26 147.6374 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 227.33 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 227.33 128.27 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 44.45 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4187,8 +4158,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 227.33 128.27 0)
+		(property "Datasheet" "~"
+			(at 44.45 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4196,25 +4167,95 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.017"
-			(at 227.33 128.27 0)
+		(property "Description" "Light emitting diode"
+			(at 44.45 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "c74baa82-8d17-4c2e-a609-20e6e216e3a1")
 		)
 		(pin "2"
-			(uuid "e36cdf73-d067-4fdf-98af-276c642af422")
+			(uuid "08248ee6-30a3-43b0-90e0-b7029a1f4064")
+		)
+		(pin "1"
+			(uuid "f51b9f0a-0ca7-4dab-acc4-d096c98b0ac1")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D13")
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 44.45 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8df7ee4d-d3c0-40a6-ad8d-3498708a3b35")
+		(property "Reference" "D16"
+			(at 48.26 152.7174 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_W"
+			(at 48.26 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 44.45 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 44.45 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 44.45 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "903050a6-b651-4ef2-825e-135ea3b98d29")
+		)
+		(pin "1"
+			(uuid "c1ce6c55-a2e8-406f-8b81-1f751df9220d")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -4246,7 +4287,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 44.45 25.4 0)
 			(effects
 				(font
@@ -4289,17 +4330,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 254 137.16 180)
+		(lib_id "Device:LED")
+		(at 55.88 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9696aac5-7140-4358-8ebf-1b9c0b596413")
-		(property "Reference" "R12"
-			(at 256.54 135.8899 0)
+		(uuid "90b048e0-c1c8-49b6-8439-dc6137968a97")
+		(property "Reference" "D18"
+			(at 59.69 152.7174 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4307,8 +4348,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "110R"
-			(at 256.54 138.4299 0)
+		(property "Value" "LED_W"
+			(at 59.69 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4316,8 +4357,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 255.778 137.16 90)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 55.88 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4325,8 +4366,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
-			(at 254 137.16 0)
+		(property "Datasheet" "~"
+			(at 55.88 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4334,34 +4375,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 254 137.16 0)
+		(property "Description" "Light emitting diode"
+			(at 55.88 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Price" "0.0021"
-			(at 254 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "df6435f1-d928-49b6-ab9f-ffc67a11a0cd")
 		)
 		(pin "2"
-			(uuid "b1d663cd-3983-4c2d-8152-1b0a68d6ac5b")
+			(uuid "711f61fc-a61a-4f93-9178-98349d844bfe")
+		)
+		(pin "1"
+			(uuid "b204ed2a-0acc-4905-96f7-1e6c7d28736d")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "R12")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -4369,40 +4401,34 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 188.595 128.27 90)
+		(at 55.88 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "973324d5-a015-4be4-bbd1-3ac54123802f")
-		(property "Reference" "D21"
-			(at 186.055 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "9747ec86-263e-4324-aa12-68839e1d56d4")
+		(property "Reference" "D17"
+			(at 59.69 145.0974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LEDW"
-			(at 191.135 128.27 0)
+		(property "Value" "LED_W"
+			(at 59.69 147.6374 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2"
-			(at 188.595 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html"
-			(at 188.595 128.27 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 55.88 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4410,8 +4436,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 188.595 128.27 0)
+		(property "Datasheet" "~"
+			(at 55.88 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4419,25 +4445,25 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.010"
-			(at 188.595 128.27 0)
+		(property "Description" "Light emitting diode"
+			(at 55.88 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "0219167d-a9b0-48ba-b6dc-7b503b133668")
 		)
 		(pin "2"
-			(uuid "c3110369-3807-4c29-9e37-9a574e8fbf57")
+			(uuid "7e6c67d0-99bd-4fb8-a8ec-828433a1a0cc")
+		)
+		(pin "1"
+			(uuid "b40201aa-f834-4f74-9940-b67c6b7042da")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D21")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -4453,7 +4479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9868bbd5-86e5-4fac-a417-2cfb58371137")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR015"
 			(at 55.88 27.94 0)
 			(effects
 				(font
@@ -4503,7 +4529,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR022")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -4519,7 +4545,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f11dce9-247d-4595-aaec-73e3e6772c5a")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR016"
 			(at 55.88 35.56 0)
 			(effects
 				(font
@@ -4569,42 +4595,42 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR023")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NPN_BCE")
-		(at 181.61 152.4 0)
+		(lib_id "Device:LED")
+		(at 71.12 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a579d47c-1f0a-4b99-baee-3e8cfe96528a")
-		(property "Reference" "Q12"
-			(at 187.325 151.1299 0)
+		(uuid "9f2c76b9-35ed-44f8-bba5-83b16570049e")
+		(property "Reference" "D19"
+			(at 74.93 145.0974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "Q_NPN_BCE"
-			(at 187.325 153.6699 0)
+		(property "Value" "LED_O"
+			(at 74.93 147.6374 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 186.69 149.86 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 71.12 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4612,8 +4638,218 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Bipolar-Transistors-BJT_TWGMC-S9013_C727139.html"
-			(at 181.61 152.4 0)
+		(property "Datasheet" "~"
+			(at 71.12 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 71.12 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "37a24c2c-2d4d-4b3e-a7a6-1bbf6d8593dc")
+		)
+		(pin "1"
+			(uuid "0f732107-7e33-45a4-8cf5-68f6d73db6b5")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 83.82 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "acd4b5f8-3c56-42ba-b190-949bb6ceeeb4")
+		(property "Reference" "D22"
+			(at 87.63 152.7174 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_O"
+			(at 87.63 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 83.82 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 83.82 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1a6e32a8-590e-4829-bb5e-c23bc58649cb")
+		)
+		(pin "1"
+			(uuid "56b01e79-7f23-4232-9d19-24b34bad87cf")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 33.02 152.4 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af0f9e19-51f6-4f7a-b97b-a42a5a883975")
+		(property "Reference" "D14"
+			(at 36.83 152.7174 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_W"
+			(at 36.83 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 33.02 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.02 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 33.02 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0eb3d767-9f13-4d4b-9131-1281a7e2e228")
+		)
+		(pin "1"
+			(uuid "9ace1d7e-a366-4ce5-a6a2-d6c2d90b7ad8")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 39.37 163.83 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af929d81-237a-43be-aa98-9a9e717b71f6")
+		(property "Reference" "R12"
+			(at 41.91 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "110R"
+			(at 41.91 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 41.148 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
+			(at 39.37 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4622,7 +4858,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 181.61 152.4 0)
+			(at 39.37 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4630,8 +4866,8 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.007"
-			(at 181.61 152.4 0)
+		(property "Price" "0.0021"
+			(at 39.37 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4640,18 +4876,85 @@
 			)
 		)
 		(pin "1"
-			(uuid "822040fd-b31f-4b3e-8dd6-890097362c10")
+			(uuid "07c84e88-cf49-48a2-bac9-629250915b00")
 		)
 		(pin "2"
-			(uuid "2e0411c3-5030-4c0b-adce-5222c6b38690")
-		)
-		(pin "3"
-			(uuid "1cfa5bfb-5891-4321-8d38-ca6d81a82ee9")
+			(uuid "89791f3e-0474-439c-a759-09553fccfe70")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "Q12")
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 83.82 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5b8ca2d-b394-4240-a037-a7da0f23272f")
+		(property "Reference" "D21"
+			(at 87.63 145.0974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED_O"
+			(at 87.63 147.6374 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 83.82 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 83.82 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a9cf617d-ec74-4ef9-a81d-e969f7a002e2")
+		)
+		(pin "1"
+			(uuid "a651cfea-0fbf-4e16-b59a-98a763b26dab")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -4659,7 +4962,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 52.07 0)
+		(at 165.1 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4667,8 +4970,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "babd8be3-6275-4981-a178-fc57d2c2fce1")
-		(property "Reference" "#PWR018"
-			(at 222.25 58.42 0)
+		(property "Reference" "#PWR023"
+			(at 165.1 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4677,7 +4980,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 222.25 56.515 0)
+			(at 165.1 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4685,7 +4988,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 52.07 0)
+			(at 165.1 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4694,7 +4997,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 52.07 0)
+			(at 165.1 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4703,7 +5006,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 222.25 52.07 0)
+			(at 165.1 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4717,7 +5020,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR018")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -4725,15 +5028,15 @@
 	)
 	(symbol
 		(lib_id "LED:WS2812B")
-		(at 214.63 43.18 0)
+		(at 157.48 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "bbf2b331-c7e8-4948-a3f4-71d0192afcda")
-		(property "Reference" "D24"
-			(at 219.71 34.29 0)
+		(property "Reference" "D28"
+			(at 162.56 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4741,7 +5044,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 219.71 36.83 0)
+			(at 162.56 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4749,7 +5052,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 215.9 50.8 0)
+			(at 158.75 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4759,7 +5062,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 217.17 52.705 0)
+			(at 160.02 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4769,7 +5072,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller"
-			(at 214.63 43.18 0)
+			(at 157.48 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4792,7 +5095,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D24")
+					(reference "D28")
 					(unit 1)
 				)
 			)
@@ -4808,7 +5111,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be9c404f-38be-44ba-a328-b316f8886500")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR011"
 			(at 34.29 27.94 0)
 			(effects
 				(font
@@ -4858,7 +5161,73 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR020")
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 39.37 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca0c8d3d-7895-4bf9-b096-85f216b959f1")
+		(property "Reference" "#PWR013"
+			(at 39.37 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 39.37 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 39.37 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ae2e493-70c3-490b-8552-a711a81dddf2")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -4874,7 +5243,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cdc9924a-1fa0-414e-be9f-c01d8e98ad8c")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR012"
 			(at 34.29 35.56 0)
 			(effects
 				(font
@@ -4924,7 +5293,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR021")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -4932,40 +5301,34 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 265.43 128.27 90)
+		(at 20.32 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cfafb147-a5a3-440e-ba91-520396effcb8")
-		(property "Reference" "D18"
-			(at 262.89 128.27 0)
+		(fields_autoplaced yes)
+		(uuid "ce3a17d0-f831-499e-8efd-a1ba013f5720")
+		(property "Reference" "D12"
+			(at 24.13 152.7174 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "LEDA"
-			(at 267.97 128.27 0)
+		(property "Value" "LED_W"
+			(at 24.13 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 265.43 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 265.43 128.27 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
+			(at 20.32 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4973,8 +5336,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 265.43 128.27 0)
+		(property "Datasheet" "~"
+			(at 20.32 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4982,25 +5345,100 @@
 				(hide yes)
 			)
 		)
-		(property "Price" "0.017"
-			(at 265.43 128.27 0)
+		(property "Description" "Light emitting diode"
+			(at 20.32 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "1"
-			(uuid "40f94696-42e3-4239-9cf7-dc64450c1df6")
 		)
 		(pin "2"
-			(uuid "88623c59-ff1c-444b-9385-289b299445e5")
+			(uuid "e8d0d442-aa45-4d59-8bcf-7285f73dcc77")
+		)
+		(pin "1"
+			(uuid "475c2ede-ee35-4632-bcae-98c770d7d6ee")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D18")
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LED:WS2812B")
+		(at 203.2 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d2944c17-dbfb-47e4-898d-c6839832640a")
+		(property "Reference" "D31"
+			(at 208.28 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "WS2812B"
+			(at 208.28 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
+			(at 204.47 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
+			(at 205.74 159.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "RGB LED with integrated controller"
+			(at 203.2 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "cefc3004-70d9-4a48-95a8-28a1988b58f5")
+		)
+		(pin "1"
+			(uuid "1b271f3a-8dc4-4761-a613-dbb2369804de")
+		)
+		(pin "2"
+			(uuid "a85f2797-47d5-494d-a0a3-11b95b210d73")
+		)
+		(pin "4"
+			(uuid "03f66659-55f4-4a8a-8385-f3d8fe28fa4d")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -5008,16 +5446,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 186.69 43.18 270)
+		(at 78.74 172.72 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d7a72063-6bde-4e3b-bfa0-250980fb3480")
-		(property "Reference" "R15"
-			(at 186.69 36.83 90)
+		(uuid "d3790dcf-3d30-4ab2-a404-72195537988b")
+		(property "Reference" "R13"
+			(at 78.74 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5025,15 +5463,15 @@
 			)
 		)
 		(property "Value" "110R"
-			(at 186.69 39.37 90)
+			(at 78.74 168.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 186.69 41.402 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 78.74 170.942 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5042,7 +5480,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
-			(at 186.69 43.18 0)
+			(at 78.74 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5051,7 +5489,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 43.18 0)
+			(at 78.74 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5060,7 +5498,84 @@
 			)
 		)
 		(property "Price" "0.0021"
-			(at 186.69 43.18 0)
+			(at 78.74 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "25886a83-8d18-41ad-a92c-4c5c9bbca40c")
+		)
+		(pin "2"
+			(uuid "3c484581-9a74-4e14-8be2-99b442165e3c")
+		)
+		(instances
+			(project "tinyLamp"
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 129.54 149.86 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7a72063-6bde-4e3b-bfa0-250980fb3480")
+		(property "Reference" "R15"
+			(at 129.54 143.51 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "110R"
+			(at 129.54 146.05 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 129.54 148.082 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
+			(at 129.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" "0.0021"
+			(at 129.54 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5084,92 +5599,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 170.815 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "dc4304d6-a5af-4079-8627-6ccd07aba105")
-		(property "Reference" "D19"
-			(at 168.275 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDW"
-			(at 173.355 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_PLCC-2"
-			(at 170.815 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-67-21S-KK5C-H302433Z6-2T_C694704.html"
-			(at 170.815 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 170.815 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.010"
-			(at 170.815 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f3ea649f-dfa6-4531-81a6-30fb0368ffd5")
-		)
-		(pin "2"
-			(uuid "720ded5f-a5c0-47f4-a031-395c24d0075f")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "LED:WS2812B")
-		(at 245.11 43.18 0)
+		(at 187.96 149.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "e0e64014-64a0-4b48-bb87-5ef907753033")
-		(property "Reference" "D26"
-			(at 250.19 34.29 0)
+		(property "Reference" "D30"
+			(at 193.04 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5177,7 +5616,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 250.19 36.83 0)
+			(at 193.04 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5185,7 +5624,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm"
-			(at 246.38 50.8 0)
+			(at 189.23 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5195,7 +5634,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf"
-			(at 247.65 52.705 0)
+			(at 190.5 159.385 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5205,7 +5644,7 @@
 			)
 		)
 		(property "Description" "RGB LED with integrated controller"
-			(at 245.11 43.18 0)
+			(at 187.96 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5228,83 +5667,7 @@
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 212.09 128.27 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f591834b-d672-47ee-83c6-f844991273f6")
-		(property "Reference" "D11"
-			(at 209.55 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LEDA"
-			(at 214.63 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 212.09 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Light-Emitting-Diodes-LED_Everlight-Elec-17-21SURC-S530-A3-4T_C2943978.html"
-			(at 212.09 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 212.09 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.017"
-			(at 212.09 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c11652a6-cdcf-4068-a1ac-26702bb7e1cc")
-		)
-		(pin "2"
-			(uuid "ef5939c6-a9ca-4110-bb56-eaae6265be34")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D11")
+					(reference "D30")
 					(unit 1)
 				)
 			)
@@ -5312,34 +5675,32 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 223.52 137.16 180)
+		(at 27.94 172.72 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f9376b47-2e33-4d7a-b4d2-17fbbe463cb3")
+		(uuid "e28a4f40-e1cf-4c77-9b72-b7551d59b046")
 		(property "Reference" "R11"
-			(at 226.06 135.8899 0)
+			(at 27.94 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Value" "110R"
-			(at 226.06 138.4299 0)
+			(at 27.94 168.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 225.298 137.16 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 27.94 170.942 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5348,7 +5709,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
-			(at 223.52 137.16 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5357,7 +5718,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 223.52 137.16 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5366,7 +5727,7 @@
 			)
 		)
 		(property "Price" "0.0021"
-			(at 223.52 137.16 0)
+			(at 27.94 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5375,94 +5736,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "08a5f451-9ea0-467c-a2c6-efb47967f884")
+			(uuid "255bf740-314f-43b4-8f83-a7a772121cc1")
 		)
 		(pin "2"
-			(uuid "723552f4-d1d0-4862-8393-cd06ed3546da")
+			(uuid "0b9dea78-486e-4d73-ab64-bbd90ed6542b")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 175.26 138.43 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fad91a98-47bc-4689-99cb-fb28059f7d38")
-		(property "Reference" "R13"
-			(at 177.8 137.1599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "15R"
-			(at 177.8 139.6999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
-			(at 177.038 138.43 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J150TSD_C2930350.html"
-			(at 175.26 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 175.26 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.0021"
-			(at 175.26 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cac0631b-9a77-4e49-a013-0db3aed2aeb6")
-		)
-		(pin "2"
-			(uuid "b02b74ae-8b6c-40f0-af57-ef24ea0baa5f")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "R13")
 					(unit 1)
 				)
 			)
