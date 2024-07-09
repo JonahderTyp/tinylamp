@@ -1078,6 +1078,151 @@
 				)
 			)
 		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Transistor_BJT:BC547"
 			(pin_names
 				(offset 0) hide)
@@ -1678,28 +1823,10 @@
 		(uuid "94cf71d2-899e-4ee1-b1de-b3ef70535722")
 	)
 	(junction
-		(at 95.25 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a3d1f5c6-ef70-4a7f-ad4b-daadcc39fea6")
-	)
-	(junction
 		(at 157.48 138.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aeef0838-2489-4e41-9fa3-b51b326602e9")
-	)
-	(junction
-		(at 95.25 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b456affc-b516-4233-a499-d19e70461100")
-	)
-	(junction
-		(at 83.82 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b5c9ee3e-767c-4391-a825-7d4059f75f12")
 	)
 	(junction
 		(at 44.45 158.75)
@@ -1730,24 +1857,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e3902b56-fdf3-409a-ae62-0708af652d64")
-	)
-	(junction
-		(at 90.17 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e6e8792f-b996-4fa4-92b2-7990428a693a")
-	)
-	(junction
-		(at 90.17 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f216f6ca-5975-43f9-be0e-d2a63c60838e")
-	)
-	(junction
-		(at 83.82 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb73c985-8687-4229-8c27-afc90bd78205")
 	)
 	(no_connect
 		(at 129.54 69.85)
@@ -1803,16 +1912,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 138.43) (xy 106.68 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "09717aa7-e143-4aa5-97ec-016b6cefe357")
-	)
-	(wire
-		(pts
 			(xy 55.88 27.94) (xy 55.88 29.21)
 		)
 		(stroke
@@ -1833,26 +1932,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 156.21) (xy 95.25 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10a6ee06-51ac-4386-8670-ed33d4eb3553")
-	)
-	(wire
-		(pts
-			(xy 83.82 158.75) (xy 90.17 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10c78569-d436-422e-8559-9f720d89be52")
-	)
-	(wire
-		(pts
 			(xy 44.45 158.75) (xy 55.88 158.75)
 		)
 		(stroke
@@ -1860,26 +1939,6 @@
 			(type default)
 		)
 		(uuid "19f20bdb-23a6-4a7e-8c82-a1c6d2d439f6")
-	)
-	(wire
-		(pts
-			(xy 83.82 138.43) (xy 83.82 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c69626c-8e3a-4a73-87dd-392bce835a48")
-	)
-	(wire
-		(pts
-			(xy 95.25 138.43) (xy 95.25 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20181fc4-004d-447e-997b-04104785cf0a")
 	)
 	(wire
 		(pts
@@ -1913,16 +1972,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 158.75) (xy 83.82 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3db9aa7d-fc53-451a-94bd-990770bb7f47")
-	)
-	(wire
-		(pts
 			(xy 39.37 158.75) (xy 44.45 158.75)
 		)
 		(stroke
@@ -1930,26 +1979,6 @@
 			(type default)
 		)
 		(uuid "3f18e83b-bb50-4cd0-8402-2ca8aa19d1a7")
-	)
-	(wire
-		(pts
-			(xy 71.12 138.43) (xy 83.82 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41f78857-f57b-47b0-aa64-fc77b5115bca")
-	)
-	(wire
-		(pts
-			(xy 90.17 158.75) (xy 90.17 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c5e6f8c-96dc-4bbf-a7c7-17e11cb4b31a")
 	)
 	(wire
 		(pts
@@ -1983,16 +2012,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 156.21) (xy 71.12 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57f789b6-d1d1-4e3f-95ca-9dbf64a52d3e")
-	)
-	(wire
-		(pts
 			(xy 142.24 138.43) (xy 157.48 138.43)
 		)
 		(stroke
@@ -2010,16 +2029,6 @@
 			(type default)
 		)
 		(uuid "604a7467-81b5-4df1-9a69-d5d143a25fc5")
-	)
-	(wire
-		(pts
-			(xy 83.82 138.43) (xy 90.17 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6244d383-190f-4446-90cd-a8231ca32e94")
 	)
 	(wire
 		(pts
@@ -2123,16 +2132,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 138.43) (xy 95.25 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9236bdc1-c1c6-49d0-9be6-d8d9a304dee8")
-	)
-	(wire
-		(pts
 			(xy 203.2 158.75) (xy 218.44 158.75)
 		)
 		(stroke
@@ -2200,16 +2199,6 @@
 			(type default)
 		)
 		(uuid "b29a88d8-d583-44c7-b607-04589a078c4e")
-	)
-	(wire
-		(pts
-			(xy 71.12 140.97) (xy 71.12 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5e1e7be-ec92-4abe-9f72-95360fe88834")
 	)
 	(wire
 		(pts
@@ -2283,16 +2272,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 158.75) (xy 106.68 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1d31d13-5dda-44cd-809f-837a4d424f70")
-	)
-	(wire
-		(pts
 			(xy 20.32 140.97) (xy 20.32 138.43)
 		)
 		(stroke
@@ -2300,16 +2279,6 @@
 			(type default)
 		)
 		(uuid "d45157fe-c0fb-423d-98d5-4cd0154f4428")
-	)
-	(wire
-		(pts
-			(xy 106.68 156.21) (xy 106.68 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4816a88-ab12-4bc0-992f-197715d37427")
 	)
 	(wire
 		(pts
@@ -2353,16 +2322,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 156.21) (xy 83.82 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6473229-049b-4d61-9bb2-669b23513c16")
-	)
-	(wire
-		(pts
 			(xy 39.37 138.43) (xy 44.45 138.43)
 		)
 		(stroke
@@ -2403,16 +2362,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 138.43) (xy 106.68 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9cf290e-fa56-48e2-a7c9-66dcc717b0c8")
-	)
-	(wire
-		(pts
 			(xy 55.88 25.4) (xy 55.88 24.13)
 		)
 		(stroke
@@ -2430,16 +2379,6 @@
 			(type default)
 		)
 		(uuid "fdd25f8e-be52-40a2-b082-c63b8cd6301f")
-	)
-	(wire
-		(pts
-			(xy 90.17 158.75) (xy 95.25 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe4726bd-295e-403b-9307-5f6f6d71577a")
 	)
 	(wire
 		(pts
@@ -2508,175 +2447,6 @@
 			(justify left)
 		)
 		(uuid "bb1468d1-af09-4040-93d4-bb658f0051e4")
-	)
-	(hierarchical_label "LEDO"
-		(shape input)
-		(at 74.93 172.72 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ca338a72-78f6-4b82-b358-ea7f126dd89b")
-	)
-	(hierarchical_label "LEDO"
-		(shape output)
-		(at 129.54 64.77 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "db86d833-0c21-44d1-b5bf-54b2614a46f2")
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 90.17 138.43 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "077d95c4-99c0-4e2a-aecc-5a0aaba8b63c")
-		(property "Reference" "#PWR017"
-			(at 90.17 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 90.17 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 90.17 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "02c9b237-bb2f-440d-89cb-74c3ceb0ad16")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 90.17 163.83 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0950c725-5af1-4e78-ab07-bd3948526092")
-		(property "Reference" "R14"
-			(at 92.71 162.5599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "110R"
-			(at 92.71 165.0999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 91.948 163.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
-			(at 90.17 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.0021"
-			(at 90.17 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7c6ce88-9a68-4fd2-a1cf-b95e6426a0b9")
-		)
-		(pin "2"
-			(uuid "3a1ad801-e6cd-47bd-ac7f-f2519c5f3234")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "LED:WS2812B")
@@ -2748,76 +2518,6 @@
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 106.68 144.78 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "11f1859f-178a-44a2-ae4f-68d3760d1e56")
-		(property "Reference" "D25"
-			(at 110.49 145.0974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 110.49 147.6374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 106.68 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 106.68 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 106.68 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "00c3f878-dffb-4fe9-9f67-fa32a46a9026")
-		)
-		(pin "1"
-			(uuid "4fe30505-34cd-48b8-9971-253abbb97ae1")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -2959,76 +2659,6 @@
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "D29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 95.25 152.4 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "287be16a-a106-43e9-99f2-c561bb41cb44")
-		(property "Reference" "D24"
-			(at 99.06 152.7174 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 99.06 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 95.25 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 95.25 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 95.25 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "14b0a700-4b21-40e9-9fe7-3e0c981d8c5f")
-		)
-		(pin "1"
-			(uuid "f79163d8-143d-424b-b3f8-6c1b418affea")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -3390,218 +3020,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 106.68 152.4 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d6e21d1-9cb7-44e6-ae38-fedd0273f6c2")
-		(property "Reference" "D26"
-			(at 110.49 152.7174 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 110.49 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 106.68 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 106.68 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 106.68 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "165e699f-9734-456f-8290-39fd468cc0c3")
-		)
-		(pin "1"
-			(uuid "6837fb02-14e2-4948-aad2-039dd380f1e7")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC547")
-		(at 87.63 172.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "406f4af5-7f25-40c5-9660-5e4ead9c3c76")
-		(property "Reference" "Q12"
-			(at 92.71 171.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC547"
-			(at 92.71 173.9899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder"
-			(at 92.71 174.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
-			(at 87.63 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
-			(at 87.63 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4b96fab2-2baa-4562-b27b-2b27e02e7b9d")
-		)
-		(pin "3"
-			(uuid "1ce350aa-5dc4-4e58-93ab-d2bb00d78cd7")
-		)
-		(pin "1"
-			(uuid "7403094a-53a4-4566-a47a-ef7f9b77fa09")
-		)
-		(instances
-			(project ""
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "Q12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 90.17 177.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "435a1283-9344-41bf-9a58-62e8616a2234")
-		(property "Reference" "#PWR018"
-			(at 90.17 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 90.17 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 90.17 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9f1cac48-fd14-4fa1-a0d2-321e7d867c85")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 116.84 39.37 0)
 		(unit 1)
@@ -3662,76 +3080,6 @@
 			(project ""
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 95.25 144.78 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "57404a4e-6731-47c9-97a5-8492de285f46")
-		(property "Reference" "D23"
-			(at 99.06 145.0974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 99.06 147.6374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 95.25 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 95.25 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 95.25 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "15d16652-396e-4d5e-81c3-0d3be3744cc9")
-		)
-		(pin "1"
-			(uuid "2c851206-f412-42fd-bc53-8a33348da080")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -4052,35 +3400,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 71.12 152.4 90)
+		(lib_id "Switch:SW_Push")
+		(at 157.48 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "861b6a89-404e-4762-bdc0-7602ea9242ec")
-		(property "Reference" "D20"
-			(at 74.93 152.7174 90)
+		(uuid "824e9d94-813d-40c5-94fe-054d382522c9")
+		(property "Reference" "SW12"
+			(at 157.48 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "LED_O"
-			(at 74.93 155.2574 90)
+		(property "Value" "SW_Push"
+			(at 157.48 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 71.12 152.4 0)
+		(property "Footprint" ""
+			(at 157.48 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4089,7 +3435,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 71.12 152.4 0)
+			(at 157.48 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4097,8 +3443,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 71.12 152.4 0)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 157.48 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4107,15 +3453,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "1cc762ef-9b0e-4738-9481-dc2e0e59a79e")
+			(uuid "6dbced98-fb31-4c23-b61a-8b4faf2d4b89")
 		)
 		(pin "1"
-			(uuid "06f6d3bd-a472-42a8-bce3-651673b4ecc7")
+			(uuid "0d85104f-44b0-40cd-b5ba-602373f201c5")
 		)
 		(instances
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D20")
+					(reference "SW12")
 					(unit 1)
 				)
 			)
@@ -4603,146 +3949,6 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 71.12 144.78 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9f2c76b9-35ed-44f8-bba5-83b16570049e")
-		(property "Reference" "D19"
-			(at 74.93 145.0974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 74.93 147.6374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 71.12 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 71.12 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 71.12 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "37a24c2c-2d4d-4b3e-a7a6-1bbf6d8593dc")
-		)
-		(pin "1"
-			(uuid "0f732107-7e33-45a4-8cf5-68f6d73db6b5")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 83.82 152.4 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "acd4b5f8-3c56-42ba-b190-949bb6ceeeb4")
-		(property "Reference" "D22"
-			(at 87.63 152.7174 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 87.63 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 83.82 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 83.82 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1a6e32a8-590e-4829-bb5e-c23bc58649cb")
-		)
-		(pin "1"
-			(uuid "56b01e79-7f23-4232-9d19-24b34bad87cf")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
 		(at 33.02 152.4 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4885,76 +4091,6 @@
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "R12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 83.82 144.78 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b5b8ca2d-b394-4240-a037-a7da0f23272f")
-		(property "Reference" "D21"
-			(at 87.63 145.0974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED_O"
-			(at 87.63 147.6374 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_THT:LED_D3.0mm_FlatTop"
-			(at 83.82 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 83.82 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a9cf617d-ec74-4ef9-a81d-e969f7a002e2")
-		)
-		(pin "1"
-			(uuid "a651cfea-0fbf-4e16-b59a-98a763b26dab")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -5162,6 +4298,74 @@
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 157.48 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c9419ff5-3d45-4ebf-9f87-c28986f8f8ae")
+		(property "Reference" "SW11"
+			(at 157.48 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 157.48 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 157.48 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "da15b8e9-68ee-479f-b365-c78fda3036b1")
+		)
+		(pin "1"
+			(uuid "0b651f8f-4ded-4cad-88df-a9a42e6f7d3c")
+		)
+		(instances
+			(project ""
+				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
+					(reference "SW11")
 					(unit 1)
 				)
 			)
@@ -5439,83 +4643,6 @@
 			(project "tinyLamp"
 				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
 					(reference "D31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 78.74 172.72 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d3790dcf-3d30-4ab2-a404-72195537988b")
-		(property "Reference" "R13"
-			(at 78.74 166.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "110R"
-			(at 78.74 168.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
-			(at 78.74 170.942 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FOJAN-FRC1206J111TSD_C2930344.html"
-			(at 78.74 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" "0.0021"
-			(at 78.74 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "25886a83-8d18-41ad-a92c-4c5c9bbca40c")
-		)
-		(pin "2"
-			(uuid "3c484581-9a74-4e14-8be2-99b442165e3c")
-		)
-		(instances
-			(project "tinyLamp"
-				(path "/5c9dc50e-a543-47e5-b88f-47a3c3ba2e43"
-					(reference "R13")
 					(unit 1)
 				)
 			)
