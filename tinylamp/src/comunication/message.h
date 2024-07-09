@@ -118,6 +118,43 @@ class Message {
     uint16_t receivedChecksum = (data[22] << 8) | data[23];
     return checksum == receivedChecksum;
   }
+
+  void print() const {
+    Serial.print("Sender MAC Address: ");
+    for (int i = 0; i < 6; i++) {
+      Serial.print(data[i], HEX);
+      if (i < 5) Serial.print(":");
+    }
+    Serial.println();
+
+    Serial.print("Receiver MAC Address: ");
+    for (int i = 6; i < 12; i++) {
+      Serial.print(data[i], HEX);
+      if (i < 11) Serial.print(":");
+    }
+    Serial.println();
+
+    Serial.print("Message ID: ");
+    Serial.println(getMsgID());
+
+    Serial.print("Group: ");
+    Serial.println(getGroup());
+
+    Serial.print("Function/Command: ");
+    Serial.println(getFunctionOrCommand());
+
+    Serial.print("Command/Function Data: ");
+    for (int i = 16; i < 22; i++) {
+      Serial.print(data[i], HEX);
+      if (i < 21) Serial.print(" ");
+    }
+    Serial.println();
+
+    Serial.print("Checksum: ");
+    Serial.print(data[22], HEX);
+    Serial.print(" ");
+    Serial.println(data[23], HEX);
+  }
 };
 
 #endif  // message_H
