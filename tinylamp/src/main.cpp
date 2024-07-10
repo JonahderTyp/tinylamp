@@ -7,14 +7,15 @@
 #include "ledcontroller.h"
 #include "valuewheel.h"
 
-uint8_t broadcastAddress[] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+uint8_t broadcastAddress[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+uint8_t macAdress[6] = WiFi.macAddress();
 
 ComHandler comHandler;
 LedController ledController(D5);
 Button colorButton(D1);
 Button brgButton(D2, 500);
 
-ValueWheel<uint8_t> groupeWheel = ValueWheel<uint8_t>({0, 1, 2, 3, 4});
+ValueWheel<uint8_t> groupWheel = ValueWheel<uint8_t>({0, 1, 2, 3, 4});
 
 void sendMsg(void *data, size_t len) {
   esp_now_send(broadcastAddress, (uint8_t *)data, len);
@@ -68,8 +69,8 @@ void loop() {
   }
   if (colorButton.isLongPress()) {
     Serial.println("Increase Group");
-    groupeWheel.increaseIndex();
-    ledController.setGroup(groupeWheel.getIndex());
+    groupWheel.increaseIndex();
+    ledController.setGroup(groupWheel.getIndex());
   }
 
   if (brgButton.isShortPress()) {
