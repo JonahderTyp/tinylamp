@@ -5,31 +5,33 @@
 #include <ESP8266WiFi.h>
 #include <espnow.h>
 
+#include <cstring>
+
 #include "message.h"
 
 class ComHandler {
  public:
   // Define a type for the callback function
   typedef void (*CallbackFunction)(void* data, size_t len);
-  ComHandler() : sendCallbackFunction(nullptr) {
+  ComHandler() : sendFunction(nullptr) {
   }
   void setSendCallback(CallbackFunction callback) {
-    sendCallbackFunction = callback;
+    sendFunction = callback;
   }
 
   void dataReceived(const uint8_t* data, size_t len) {
     if (len != 24) {
       return;
     }
-    // byte recivedData[24];
 
     Message message;
-    message.decodeMessage(data);
+    message.decode(data);
 
-    if (message.checkChecksum() && !isSeen(message.getMsgID())) {
+    if (message.checkChecksum() && !isSeen(message.getMsgID()) &&
+        !hasNewMessageAvailable) {
       newMessage = message;
       hasNewMessageAvailable = true;
-      sendCallbackFunction(message.encode(), len);
+      sendFunction(message.encode(), len);
     }
   }
 
@@ -37,14 +39,32 @@ class ComHandler {
     return hasNewMessageAvailable;
   }
 
+  bool isRelevant(uint8_t group) {
+    uint8_t received_mac[6];
+    uint8_t broadcast_mac[6] = {0, 0, 0, 0, 0, 0};
+    newMessage.getReceiverMacAddress(received_mac);
+    bool chk_mac =
+        memcmp(received_mac, this->macAddress, sizeof(received_mac)) == 0 ||
+        memcmp(received_mac, broadcast_mac, sizeof(received_mac)) == 0;
+    bool chk_group =
+        newMessage.getGroup() == 0 || newMessage.getGroup() == group;
+    return chk_group && chk_mac;
+  }
+
   Message getNewMessage() {
     hasNewMessageAvailable = false;
     return newMessage;
   }
 
+  void setMacAddress(const uint8_t mac[6]) {
+    std::copy(mac, mac + 6, macAddress);
+  }
+
  private:
-  CallbackFunction sendCallbackFunction;
+  CallbackFunction sendFunction;
   std::vector<uint16_t> seenMsgs;
+
+  uint8_t macAddress[6];
 
   Message newMessage;
   bool hasNewMessageAvailable = false;
