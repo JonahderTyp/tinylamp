@@ -36,6 +36,35 @@ void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
   }
 }
 
+void lamp() {
+  if (colorButton.isShortPress()) {
+    Serial.println("Increase Color");
+    ledController.increaseColor();
+  }
+  if (colorButton.isLongPress()) {
+    Serial.println("Increase Group");
+    groupWheel.increaseIndex();
+    ledController.setGroup(groupWheel.getIndex());
+  }
+
+  if (brgButton.isShortPress()) {
+    Serial.println("Increase Brightness");
+    ledController.increaseBrightness();
+  }
+
+  if (brgButton.isLongPress()) {
+    Serial.println("Turning Off");
+    ledController.turnOff();
+  }
+
+  if (comHandler.hasNewMessage()) {
+    Message message = comHandler.getNewMessage();
+    // uint8_t macAddress[6] = message.getReceiverMacAddress();
+
+    message.print();
+  }
+}
+
 // Example usage
 void setup() {
   Serial.begin(115200);
@@ -65,30 +94,7 @@ void loop() {
   brgButton.handle();
   ledController.loop();
 
-  if (colorButton.isShortPress()) {
-    Serial.println("Increase Color");
-    ledController.increaseColor();
-  }
-  if (colorButton.isLongPress()) {
-    Serial.println("Increase Group");
-    groupWheel.increaseIndex();
-    ledController.setGroup(groupWheel.getIndex());
-  }
-
-  if (brgButton.isShortPress()) {
-    Serial.println("Increase Brightness");
-    ledController.increaseBrightness();
-  }
-
-  if (brgButton.isLongPress()) {
-    Serial.println("Turning Off");
-    ledController.turnOff();
-  }
-
-  if (comHandler.hasNewMessage()) {
-    Message message = comHandler.getNewMessage();
-    // uint8_t macAddress[6] = message.getReceiverMacAddress();
-
-    message.print();
+  if (true) {
+    lamp();
   }
 }
