@@ -18,19 +18,27 @@ class Button {
   bool isLongPress();
 
  private:
-  int buttonPin;                    // Pin number where the button is connected
-  unsigned long holdTimeThreshold;  // Time threshold to differentiate between
-                                    // short and long press
-  unsigned long
-      lastDebounceTime;           // Time when the button state was last changed
-  unsigned long debounceDelay;    // Debounce delay time
-  unsigned long buttonPressTime;  // Time when the button was pressed
+  // Pin number where the button is connected
+  int buttonPin;
+  // Time threshold to differentiate between short and long press
+  unsigned long holdTimeThreshold;
+  // Time when the button state was last changed
+  unsigned long lastDebounceTime;
+  // Debounce delay time
+  unsigned long debounceDelay;
+  // Time when the button was pressed
+  unsigned long buttonPressTime;
 
-  bool buttonState;         // Current state of the button
-  bool lastButtonState;     // Previous state of the button
-  bool shortPressDetected;  // Flag for short press detection
-  bool longPressDetected;   // Flag for long press detection
-  bool longPressHandled;  // Flag to indicate if the long press has been handled
+  // Current state of the button
+  bool buttonState;
+  // Previous state of the button
+  bool lastButtonState;
+  // Flag for short press detection
+  bool shortPressDetected;
+  // Flag for long press detection
+  bool longPressDetected;
+  // Flag to indicate if the long press has been handled
+  bool longPressHandled;
 };
 
 #endif  // BUTTON_H
