@@ -8,7 +8,7 @@
 #include "valuewheel.h"
 
 uint8_t broadcastAddress[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-uint8_t macAdress[6] = WiFi.macAddress();
+uint8_t macAddress[6];
 
 ComHandler comHandler;
 LedController ledController(D5);
@@ -23,7 +23,7 @@ void sendMsg(void *data, size_t len) {
 
 // Callback when data is received
 void OnDataRecv(uint8_t *mac, uint8_t *incomingData, uint8_t len) {
-  comHandler.dataRecieved(incomingData, len);
+  comHandler.dataReceived(incomingData, len);
 }
 
 // Callback when data is sent
@@ -40,6 +40,7 @@ void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
 void setup() {
   Serial.begin(115200);
   Serial.println("\nStarting...");
+  wifi_get_macaddr(STATION_IF, macAddress);
 
   comHandler.setSendCallback(sendMsg);
 
@@ -48,7 +49,7 @@ void setup() {
     Serial.println("Error initializing ESP-NOW");
     return;
   } else {
-    Serial.println("Sucessfully initalized ESP-NOW");
+    Serial.println("Successfully initalized ESP-NOW");
   }
 
   esp_now_set_self_role(ESP_NOW_ROLE_COMBO);
