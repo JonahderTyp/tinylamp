@@ -16,6 +16,7 @@ Button colorButton(D1);
 Button brgButton(D2, 500);
 
 ValueWheel<uint8_t> groupWheel = ValueWheel<uint8_t>({0, 1, 2, 3, 4});
+ValueWheel<uint8_t> modeWheel = ValueWheel<uint8_t>({0, 1});
 
 void sendMsg(void *data, size_t len) {
   esp_now_send(broadcastAddress, (uint8_t *)data, len);
@@ -40,11 +41,6 @@ void lamp() {
   if (colorButton.isShortPress()) {
     Serial.println("Increase Color");
     ledController.increaseColor();
-  }
-  if (colorButton.isLongPress()) {
-    Serial.println("Increase Group");
-    groupWheel.increaseIndex();
-    ledController.setGroup(groupWheel.getIndex());
   }
 
   if (brgButton.isShortPress()) {
@@ -94,7 +90,28 @@ void loop() {
   brgButton.handle();
   ledController.loop();
 
-  if (true) {
-    lamp();
+  if (colorButton.isExtraLongPress()) {
+    Serial.println("Increase Group");
+
+    // ledController.setGroup(groupWheel.getIndex());
+  }
+
+  switch (modeWheel.getIndex()) {
+    case 1:
+      // menu group
+      if (brgButton.isShortPress()) {
+        Serial.println("Increase Group");
+        groupWheel.increaseIndex();
+        ledController.setGroup(groupWheel.getIndex());
+      } else if (colorButton.isLongPress()) {
+        Serial.println("Decrease Group");
+        groupWheel.decreaseIndex();
+        ledController.setGroup(groupWheel.getIndex());
+      }
+      break;
+
+    default:
+      lamp();
+      break;
   }
 }
