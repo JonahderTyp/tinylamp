@@ -43,6 +43,7 @@ void setup() {
   wifi_get_macaddr(STATION_IF, macAddress);
 
   comHandler.setSendCallback(sendMsg);
+  comHandler.setMacAddress(macAddress);
 
   // Init ESP-NOW
   if (esp_now_init() != 0) {
@@ -86,6 +87,8 @@ void loop() {
 
   if (comHandler.hasNewMessage()) {
     Message message = comHandler.getNewMessage();
+    // uint8_t macAddress[6] = message.getReceiverMacAddress();
+
     message.print();
   }
 }
