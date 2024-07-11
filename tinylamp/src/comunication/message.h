@@ -3,15 +3,11 @@
 
 #include <Arduino.h>
 
-#include <array>
-
-#include "ESP8266TrueRandom.h"
-
 #define LENGTH 24
 
 class Message {
  private:
-  std::array<uint8_t, LENGTH> data;
+  uint8_t data[LENGTH];
 
   uint16_t calculateChecksum() const {
     uint16_t checksum = 0;
@@ -23,27 +19,23 @@ class Message {
 
  public:
   Message() {
-    data.fill(0);
+    std::fill(data, data + LENGTH, 0);
   }
 
-  void setSenderMacAddress(const std::array<uint8_t, 6> &mac) {
-    std::copy(mac.begin(), mac.end(), data.begin());
+  void setSenderMacAddress(const uint8_t mac[6]) {
+    std::copy(mac, mac + 6, data);
   }
 
-  std::array<uint8_t, 6> getSenderMacAddress() const {
-    std::array<uint8_t, 6> mac;
-    std::copy(data.begin(), data.begin() + 6, mac.begin());
-    return mac;
+  void getSenderMacAddress(uint8_t mac[6]) const {
+    std::copy(data, data + 6, mac);
   }
 
-  void setReceiverMacAddress(const std::array<uint8_t, 6> &mac) {
-    std::copy(mac.begin(), mac.end(), data.begin() + 6);
+  void setReceiverMacAddress(const uint8_t mac[6]) {
+    std::copy(mac, mac + 6, data + 6);
   }
 
-  std::array<uint8_t, 6> getReceiverMacAddress() const {
-    std::array<uint8_t, 6> mac;
-    std::copy(data.begin() + 6, data.begin() + 12, mac.begin());
-    return mac;
+  void getReceiverMacAddress(uint8_t mac[6]) const {
+    std::copy(data + 6, data + 12, mac);
   }
 
   void setMsgID(uint16_t msgID) {
@@ -75,42 +67,26 @@ class Message {
     return data[15];
   }
 
-  void setCommandFunctionData(
-      const std::array<uint8_t, 6> &commandFunctionData) {
-    std::copy(commandFunctionData.begin(), commandFunctionData.end(),
-              data.begin() + 16);
+  void setCommandFunctionData(const uint8_t commandFunctionData[6]) {
+    std::copy(commandFunctionData, commandFunctionData + 6, data + 16);
   }
 
-  std::array<uint8_t, 6> getCommandFunctionData() const {
-    std::array<uint8_t, 6> commandFunctionData;
-    std::copy(data.begin() + 16, data.begin() + 22,
-              commandFunctionData.begin());
-    return commandFunctionData;
+  void getCommandFunctionData(uint8_t commandFunctionData[6]) const {
+    std::copy(data + 16, data + 22, commandFunctionData);
   }
 
-  // std::array<uint8_t, LENGTH> encodeMessage() {
-  //   uint16_t checksum = calculateChecksum();
-  //   data[22] = checksum >> 8;
-  //   data[23] = checksum & 0xFF;
-  //   return data;
-  // }
-
-  void *encode() {
+  uint8_t* encode() {
     uint16_t checksum = calculateChecksum();
     data[22] = checksum >> 8;
     data[23] = checksum & 0xFF;
 
-    uint8_t *encodedData = new uint8_t[LENGTH];
-    std::memcpy(encodedData, data.data(), LENGTH);
-    return static_cast<void *>(encodedData);
+    uint8_t* encodedData = new uint8_t[LENGTH];
+    std::memcpy(encodedData, data, LENGTH);
+    return encodedData;
   }
 
-  void decodeMessage(const uint8_t *encodedData) {
-    std::copy(encodedData, encodedData + LENGTH, data.begin());
-  }
-
-  void decodeMessage(const std::array<uint8_t, LENGTH> &message) {
-    data = message;
+  void decode(const uint8_t* encodedData) {
+    std::copy(encodedData, encodedData + LENGTH, data);
   }
 
   bool checkChecksum() const {
