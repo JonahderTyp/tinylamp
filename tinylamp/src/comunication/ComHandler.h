@@ -41,7 +41,7 @@ class ComHandler {
 
   bool isRelevant(uint8_t group) {
     uint8_t received_mac[6];
-    uint8_t broadcast_mac[6] = {0, 0, 0, 0, 0, 0};
+    uint8_t broadcast_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
     newMessage.getReceiverMacAddress(received_mac);
     bool chk_mac =
         memcmp(received_mac, this->macAddress, sizeof(received_mac)) == 0 ||
