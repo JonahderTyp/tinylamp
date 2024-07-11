@@ -2,11 +2,17 @@
 
 #include <Arduino.h>
 
-Button::Button(int pin, unsigned long holdTimeThreshold) 
-  : buttonPin(pin), holdTimeThreshold(holdTimeThreshold), lastDebounceTime(0),
-    debounceDelay(50), buttonPressTime(0), buttonState(LOW), 
-    lastButtonState(LOW), shortPressDetected(false), longPressDetected(false), 
-    longPressHandled(false) {
+Button::Button(int pin, unsigned long holdTimeThreshold)
+    : buttonPin(pin),
+      holdTimeThreshold(holdTimeThreshold),
+      lastDebounceTime(0),
+      debounceDelay(50),
+      buttonPressTime(0),
+      buttonState(LOW),
+      lastButtonState(LOW),
+      shortPressDetected(false),
+      longPressDetected(false),
+      longPressHandled(false) {
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
