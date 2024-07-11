@@ -75,10 +75,13 @@ class Message {
     std::copy(data + 16, data + 22, commandFunctionData);
   }
 
-  uint8_t* encode() {
+  uint8_t* encode() const {
+    uint8_t localData[LENGTH];
+    std::memcpy(localData, data, LENGTH);
+
     uint16_t checksum = calculateChecksum();
-    data[22] = checksum >> 8;
-    data[23] = checksum & 0xFF;
+    localData[22] = checksum >> 8;
+    localData[23] = checksum & 0xFF;
 
     uint8_t* encodedData = new uint8_t[LENGTH];
     std::memcpy(encodedData, data, LENGTH);

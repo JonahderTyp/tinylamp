@@ -56,6 +56,10 @@ class ComHandler {
     return newMessage;
   }
 
+  void send(const Message& msg) {
+    sendFunction(msg.encode(), 24);
+  }
+
   void setMacAddress(const uint8_t mac[6]) {
     std::copy(mac, mac + 6, macAddress);
   }
