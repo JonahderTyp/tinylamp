@@ -17,7 +17,7 @@ class ComHandler {
     sendCallbackFunction = callback;
   }
 
-  void dataRecieved(const uint8_t* data, size_t len) {
+  void dataReceived(const uint8_t* data, size_t len) {
     if (len != 24) {
       return;
     }
