@@ -2,6 +2,7 @@
 #include <ESP8266WiFi.h>
 #include <espnow.h>
 
+#include "blink/blink.h"
 #include "button/button.h"
 #include "comunication/ComHandler.h"
 #include "ledcontroller.h"
@@ -10,6 +11,7 @@
 uint8_t broadcastAddress[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 uint8_t macAddress[6];
 
+Blink activity;
 ComHandler comHandler;
 LedController ledController(D5);
 // Plus Button
@@ -23,12 +25,32 @@ uint8_t group = 0;
 ValueWheel<uint8_t> modeWheel = ValueWheel<uint8_t>({0, 1});
 ValueWheel<uint8_t> menuWheel = ValueWheel<uint8_t>({0});
 
+void led(int i) {
+  Serial.print("LED: ");
+  Serial.println(i);
+  digitalWrite(LED_BUILTIN, !i);
+}
+
 void sendMsg(void *data, size_t len) {
+  Serial.println("Sending Message");
+  activity.blink();
+  for (size_t i = 0; i < len; i++) {
+    Serial.print(i);
+    Serial.print("\t");
+  }
+  Serial.println();
+  for (size_t i = 0; i < len; i++) {
+    Serial.print(((uint8_t *)data)[i], HEX);
+    Serial.print("\t");
+  }
+  Serial.println();
   esp_now_send(broadcastAddress, (uint8_t *)data, len);
 }
 
 // Callback when data is received
 void OnDataRecv(uint8_t *mac, uint8_t *incomingData, uint8_t len) {
+  Serial.println("Data Received");
+  activity.blink();
   comHandler.dataReceived(incomingData, len);
 }
 
@@ -39,6 +61,18 @@ void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
     Serial.println("Delivery success");
   } else {
     Serial.println("Delivery fail");
+  }
+}
+
+void handleMessage(Message message) {
+  Serial.println("Message Received:");
+  message.print();
+  if (message.isCommand()) {
+    if (message.getCFActive(command::COLORINDEX))
+      ledController.setColor(message.getCFDataAtIndex(command::COLORINDEX));
+    if (message.getCFActive(command::BRIGHTNESSINDEX))
+      ledController.setBrightness(
+          message.getCFDataAtIndex(command::BRIGHTNESSINDEX));
   }
 }
 
@@ -59,22 +93,25 @@ void lamp() {
   }
 
   if (colorButton.isLongPress()) {
-    Serial.println("Sending Message");
+    Serial.println("Building Message");
     Message message;
     message.setSenderMacAddress(macAddress);
     message.setReceiverMacAddress(broadcastAddress);
     message.setGroup(group);
 
+    message.setIsComand();
+    message.setCFDataAtIndex(command::COLORINDEX, ledController.getColor());
+    message.setCFDataAtIndex(command::BRIGHTNESSINDEX,
+                             ledController.getBrightness());
+
     message.finalize();
-    message.print();
+    // message.print();
     comHandler.send(message);
   }
 
   if (comHandler.hasNewMessage()) {
     Message message = comHandler.getNewMessage();
-    // uint8_t macAddress[6] = message.getReceiverMacAddress();
-
-    message.print();
+    handleMessage(message);
   }
 }
 
@@ -106,6 +143,9 @@ void menu() {
 void setup() {
   Serial.begin(115200);
   Serial.println("\nStarting...");
+  WiFi.mode(WIFI_STA);
+  pinMode(LED_BUILTIN, OUTPUT);
+  activity.setCallback(led);
   wifi_get_macaddr(STATION_IF, macAddress);
 
   comHandler.setSendCallback(sendMsg);
@@ -124,9 +164,15 @@ void setup() {
   esp_now_register_send_cb(OnDataSent);
   esp_now_register_recv_cb(OnDataRecv);
   esp_now_add_peer(broadcastAddress, ESP_NOW_ROLE_COMBO, 1, NULL, 0);
+
+  delay(1000);
+  Serial.println("Blinking");
+  activity.blink(3);
+  delay(1000);
 }
 
 void loop() {
+  activity.handle();
   colorButton.handle();
   brgButton.handle();
   ledController.loop();

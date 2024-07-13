@@ -6,6 +6,29 @@
 
 #define LENGTH 24
 
+/*
+Function MSB: 1
+Command MSB: 0
+
+*/
+
+enum command {
+  COLORINDEX = 0,
+  BRIGHTNESSINDEX,
+  GROUP,
+  COMMANDRESERVE3,
+  COMMANDRESERVE4,
+  COMMANDRESERVE5
+};
+enum function {
+  KEYLOCK = 0,
+  FUNCTIONRESERVE1,
+  FUNCTIONRESERVE2,
+  FUNCTIONRESERVE3,
+  FUNCTIONRESERVE4,
+  FUNCTIONRESERVE5
+};
+
 class Message {
  private:
   uint8_t data[LENGTH];
@@ -56,24 +79,67 @@ class Message {
     return data[14];
   }
 
-  void setFunction(uint8_t function) {
-    data[15] = (function & 0b00111111) | 0x80;
+  // void setFunction(uint8_t function) {
+  //   data[15] = (function & 0b00111111) | 0x80;
+  // }
+
+  // void setCommand(uint8_t command) {
+  //   data[15] = command & 0b00111111;
+  // }
+
+  // uint8_t getFunctionOrCommand() const {
+  //   return data[15];
+  // }
+
+  void setIsComand() {
+    data[15] &= 0x7F;
   }
 
-  void setCommand(uint8_t command) {
-    data[15] = command & 0b00111111;
+  void setIsFunction() {
+    data[15] |= 0x80;
   }
 
-  uint8_t getFunctionOrCommand() const {
-    return data[15];
+  bool isFunction() const {
+    return data[15] & 0x80;
   }
 
-  void setCommandFunctionData(const uint8_t commandFunctionData[6]) {
-    std::copy(commandFunctionData, commandFunctionData + 6, data + 16);
+  bool isCommand() const {
+    return !isFunction();
   }
 
-  void getCommandFunctionData(uint8_t commandFunctionData[6]) const {
-    std::copy(data + 16, data + 22, commandFunctionData);
+  // void setCommandFunctionData(const uint8_t commandFunctionData[6]) {
+  //   std::copy(commandFunctionData, commandFunctionData + 6, data + 16);
+  // }
+
+  // void getCommandFunctionData(uint8_t commandFunctionData[6]) const {
+  //   std::copy(data + 16, data + 22, commandFunctionData);
+  // }
+
+  bool getCFActive(uint8_t index) const {
+    index = index % 6;
+    return data[15] & (1 << index);
+  }
+
+  // activate or deactivate a command
+  // automatically via setCommandFunctionDataAtIndex
+  void setCommandActive(uint8_t index, bool active = true) {
+    index = index % 6;
+    if (active) {
+      data[15] |= (1 << index);
+    } else {
+      data[15] &= ~(1 << index);
+    }
+  }
+
+  uint8_t getCFDataAtIndex(uint8_t index) const {
+    index = index % 6;
+    return data[16 + index];
+  }
+
+  void setCFDataAtIndex(uint8_t index, uint8_t value) {
+    index = index % 6;
+    this->setCommandActive(index);
+    data[16 + index] = value;
   }
 
   void finalize() {
@@ -82,15 +148,17 @@ class Message {
 
   // from object to raw
   uint8_t* encode() const {
-    uint8_t localData[LENGTH];
-    std::memcpy(localData, data, LENGTH);
+    // uint8_t localData[LENGTH];
+    // std::memcpy(localData, data, LENGTH);
 
     uint16_t checksum = calculateChecksum();
-    localData[22] = checksum >> 8;
-    localData[23] = checksum & 0xFF;
+    // localData[22] = checksum >> 8;
+    // localData[23] = checksum & 0xFF;
 
     uint8_t* encodedData = new uint8_t[LENGTH];
     std::memcpy(encodedData, data, LENGTH);
+    encodedData[22] = checksum >> 8;
+    encodedData[23] = checksum & 0xFF;
     return encodedData;
   }
 
@@ -126,13 +194,26 @@ class Message {
     Serial.print("Group: ");
     Serial.println(getGroup());
 
-    Serial.print("Function/Command: ");
-    Serial.println(getFunctionOrCommand());
+    if (isCommand()) {
+      Serial.println("Is Command");
+    } else {
+      Serial.println("Is Function");
+    }
 
-    Serial.print("Command/Function Data: ");
-    for (int i = 16; i < 22; i++) {
-      Serial.print(data[i], HEX);
-      if (i < 21) Serial.print(" ");
+    Serial.print("Active: ");
+    for (int i = 0; i < 6; i++) {
+      if (getCFActive(i))
+        Serial.print("J");
+      else
+        Serial.print("N");
+      Serial.print("\t");
+    }
+    Serial.println();
+
+    Serial.print("Value:  ");
+    for (int i = 0; i < 6; i++) {
+      Serial.print(this->getCFDataAtIndex(i), HEX);
+      Serial.print("\t");
     }
     Serial.println();
 

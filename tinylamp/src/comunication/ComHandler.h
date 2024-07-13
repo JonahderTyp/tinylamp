@@ -25,30 +25,32 @@ class ComHandler {
     }
 
     Message message;
+    Serial.println("Decoding message:");
     message.decode(data);
 
-    if (message.checkChecksum() && !isSeen(message.getMsgID()) &&
-        !hasNewMessageAvailable) {
+    bool validchecksum = message.checkChecksum();
+    bool alreadySeen = isSeen(message.getMsgID());
+
+    Serial.print("checksum: ");
+    Serial.println(validchecksum);
+    Serial.print("alreadySeen: ");
+    Serial.println(alreadySeen);
+    Serial.print("newMessageAvailable: ");
+    Serial.println(hasNewMessageAvailable);
+
+    if (validchecksum && !alreadySeen && !hasNewMessageAvailable) {
+      Serial.println("Message is valid");
       newMessage = message;
       hasNewMessageAvailable = true;
+      Serial.println("Repeating message:");
       sendFunction(message.encode(), len);
+    } else {
+      Serial.println("Message is invalid");
     }
   }
 
   bool hasNewMessage() {
     return hasNewMessageAvailable;
-  }
-
-  bool isRelevant(uint8_t group) {
-    uint8_t received_mac[6];
-    uint8_t broadcast_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-    newMessage.getReceiverMacAddress(received_mac);
-    bool chk_mac =
-        memcmp(received_mac, this->macAddress, sizeof(received_mac)) == 0 ||
-        memcmp(received_mac, broadcast_mac, sizeof(received_mac)) == 0;
-    bool chk_group =
-        newMessage.getGroup() == 0 || newMessage.getGroup() == group;
-    return chk_group && chk_mac;
   }
 
   Message getNewMessage() {
@@ -84,6 +86,18 @@ class ComHandler {
       seenMsgs.erase(seenMsgs.begin());
     }
     return false;
+  }
+
+  bool isRelevant(uint8_t group) {
+    uint8_t received_mac[6];
+    uint8_t broadcast_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    newMessage.getReceiverMacAddress(received_mac);
+    bool chk_mac =
+        memcmp(received_mac, this->macAddress, sizeof(received_mac)) == 0 ||
+        memcmp(received_mac, broadcast_mac, sizeof(received_mac)) == 0;
+    bool chk_group =
+        newMessage.getGroup() == 0 || newMessage.getGroup() == group;
+    return chk_group && chk_mac;
   }
 };
 
