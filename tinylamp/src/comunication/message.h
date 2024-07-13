@@ -2,6 +2,7 @@
 #define message_H
 
 #include <Arduino.h>
+#include <ESP8266TrueRandom.h>
 
 #define LENGTH 24
 
@@ -15,6 +16,11 @@ class Message {
       checksum += data[i];
     }
     return checksum;
+  }
+
+  void setMsgID(uint16_t msgID) {
+    data[12] = msgID >> 8;
+    data[13] = msgID & 0xFF;
   }
 
  public:
@@ -36,11 +42,6 @@ class Message {
 
   void getReceiverMacAddress(uint8_t mac[6]) const {
     std::copy(data + 6, data + 12, mac);
-  }
-
-  void setMsgID(uint16_t msgID) {
-    data[12] = msgID >> 8;
-    data[13] = msgID & 0xFF;
   }
 
   uint16_t getMsgID() const {
@@ -75,6 +76,11 @@ class Message {
     std::copy(data + 16, data + 22, commandFunctionData);
   }
 
+  void finalize() {
+    this->setMsgID(ESP8266TrueRandom.random(0, UINT16_MAX));
+  }
+
+  // from object to raw
   uint8_t* encode() const {
     uint8_t localData[LENGTH];
     std::memcpy(localData, data, LENGTH);
@@ -88,6 +94,7 @@ class Message {
     return encodedData;
   }
 
+  // from raw to object
   void decode(const uint8_t* encodedData) {
     std::copy(encodedData, encodedData + LENGTH, data);
   }
