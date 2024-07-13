@@ -58,6 +58,18 @@ void lamp() {
     ledController.turnOff();
   }
 
+  if (colorButton.isLongPress()) {
+    Serial.println("Sending Message");
+    Message message;
+    message.setSenderMacAddress(macAddress);
+    message.setReceiverMacAddress(broadcastAddress);
+    message.setGroup(group);
+
+    message.finalize();
+    message.print();
+    comHandler.send(message);
+  }
+
   if (comHandler.hasNewMessage()) {
     Message message = comHandler.getNewMessage();
     // uint8_t macAddress[6] = message.getReceiverMacAddress();
