@@ -16,14 +16,24 @@ class LedController {
 
   void menu(size_t _color, uint8_t _setting) {
     unsigned int color = numberWheel.getViaIndex(_color);
+    byte offset = 1;
 
     strip.setPixelColor(0, color);
-
-    for (size_t i = 0; i < 8; i++) {
-      if (_setting & (1 << i)) {
-        strip.setPixelColor(i + 1, 0x808000);
-      } else {
-        strip.setPixelColor(i + 1, 0x800000);
+    if (_setting <= 8 && _setting >= 0) {
+      for (size_t i = 0; i < 8; i++) {
+        if (_setting > i) {
+          strip.setPixelColor(i + offset, 0x000080);
+        } else {
+          strip.setPixelColor(i + offset, 0);
+        }
+      }
+    } else {
+      for (size_t i = 0; i < 8; i++) {
+        if (_setting & (1 << i)) {
+          strip.setPixelColor(i + offset, 0x808000);
+        } else {
+          strip.setPixelColor(i + offset, 0x800000);
+        }
       }
     }
     strip.show();
