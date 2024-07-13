@@ -14,18 +14,16 @@ class LedController {
     strip.show();
   }
 
-  template <typename T1, typename T2>
-  void menu(ValueWheel<T1>& _menuWheel, ValueWheel<T2>& _setting) {
-    unsigned int color = numberWheel.getViaIndex(_menuWheel.getIndex());
-    size_t value = (uint8_t)_setting.getIndex();
+  void menu(size_t _color, uint8_t _setting) {
+    unsigned int color = numberWheel.getViaIndex(_color);
 
     strip.setPixelColor(0, color);
 
     for (size_t i = 0; i < 8; i++) {
-      if (value & (1 << i)) {
-        strip.setPixelColor(i + 1, 0xFFFF00);
+      if (_setting & (1 << i)) {
+        strip.setPixelColor(i + 1, 0x808000);
       } else {
-        strip.setPixelColor(i + 1, 0xFF0000);
+        strip.setPixelColor(i + 1, 0x800000);
       }
     }
     strip.show();
@@ -132,7 +130,7 @@ class LedController {
   });  // 0-7 are the brightness indexes
 
   ValueWheel<unsigned int> numberWheel = ValueWheel<unsigned int>(
-      {0xFFFFFF, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF});
+      {0xFFFFFF, 0x00FF00, 0x0000FF, 0xFF00FF, 0x00FFFF});
 
   uint32_t calculateColor(uint8_t colorIndex, uint8_t brightnessIndex) {
     uint32_t color = colorWheel.getViaIndex(colorIndex);
