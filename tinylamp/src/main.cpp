@@ -81,6 +81,7 @@ void menu() {
         Serial.println("Increase Group");
         groupWheel.decreaseIndex();
       }
+      ledController.menu(menuWheel, groupWheel);
       break;
   }
 }
