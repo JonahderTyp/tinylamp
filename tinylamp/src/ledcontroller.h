@@ -78,6 +78,16 @@ class LedController {
     return brightnessWheel.getIndex();
   }
 
+  void setColor(uint8_t colorIndex) {
+    colorWheel.setIndex(colorIndex);
+    this->updateColor();
+  }
+
+  void setBrightness(uint8_t brightnessIndex) {
+    brightnessWheel.setIndex(brightnessIndex);
+    this->updateColor();
+  }
+
   // void strobe(bool activate, uint8_t colorIndex = 6,
   //             uint8_t brightness = NUMBRIGHTNESS - 1) {
   //   this->strobeColorIndex = colorIndex;
