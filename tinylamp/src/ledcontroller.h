@@ -14,11 +14,21 @@ class LedController {
     strip.show();
   }
 
-  void setGroup(uint8_t _group) {
-    this->group = _group;
-    Serial.print("Group: ");
-    Serial.println(this->group);
-    this->updateColor();
+  template <typename T1, typename T2>
+  void menu(ValueWheel<T1>& _menuWheel, ValueWheel<T2>& _setting) {
+    unsigned int color = numberWheel.getViaIndex(_menuWheel.getIndex());
+    size_t value = (uint8_t)_setting.getIndex();
+
+    strip.setPixelColor(0, color);
+
+    for (size_t i = 0; i < 8; i++) {
+      if (value & (1 << i)) {
+        strip.setPixelColor(i + 1, 0xFFFF00);
+      } else {
+        strip.setPixelColor(i + 1, 0xFF0000);
+      }
+    }
+    strip.show();
   }
 
   void increaseColor() {
@@ -86,6 +96,13 @@ class LedController {
     // }
   }
 
+  void clear() {
+    for (uint16_t i = 0; i < strip.numPixels(); i++) {
+      strip.setPixelColor(i, 0);
+    }
+    strip.show();
+  }
+
  private:
   Adafruit_NeoPixel strip;
   // bool strobeActive;
@@ -95,7 +112,6 @@ class LedController {
   // uint8_t colorIndex = 0;                       // Default to black
   // uint8_t brightnessIndex = NUMBRIGHTNESS - 1;  // Default to maximum
   // brightness
-  uint8_t group = 0;
 
   ValueWheel<unsigned int> colorWheel = ValueWheel<unsigned int>({
       strip.Color(255, 0, 0),     // Red
@@ -114,6 +130,9 @@ class LedController {
       64,
       255,
   });  // 0-7 are the brightness indexes
+
+  ValueWheel<unsigned int> numberWheel = ValueWheel<unsigned int>(
+      {0xFFFFFF, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF});
 
   uint32_t calculateColor(uint8_t colorIndex, uint8_t brightnessIndex) {
     uint32_t color = colorWheel.getViaIndex(colorIndex);
@@ -134,12 +153,6 @@ class LedController {
     uint32_t actualColor = calculateColor(colorIndex, brightnessIndex);
     for (uint16_t i = 0; i < strip.numPixels(); i++) {
       strip.setPixelColor(i, actualColor);
-    }
-    for (uint16_t i = 0; i < group; i++) {
-      int num = i;
-      if (strip.getPixelColor(num) == 0) {
-        strip.setPixelColor(num, calculateColor(2, 1));
-      }
     }
     strip.show();
   }

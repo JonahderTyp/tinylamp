@@ -12,11 +12,16 @@ uint8_t macAddress[6];
 
 ComHandler comHandler;
 LedController ledController(D5);
+// Plus Button
 Button colorButton(D1);
+// Minus Button
 Button brgButton(D2, 500);
+
+bool bothPressed = false;
 
 ValueWheel<uint8_t> groupWheel = ValueWheel<uint8_t>({0, 1, 2, 3, 4});
 ValueWheel<uint8_t> modeWheel = ValueWheel<uint8_t>({0, 1});
+ValueWheel<uint8_t> menuWheel = ValueWheel<uint8_t>({0});
 
 void sendMsg(void *data, size_t len) {
   esp_now_send(broadcastAddress, (uint8_t *)data, len);
@@ -61,6 +66,25 @@ void lamp() {
   }
 }
 
+void menu() {
+  if (colorButton.isLongPress()) {
+    Serial.println("Increase Menu");
+    menuWheel.increaseIndex();
+  }
+  switch (menuWheel.getIndex()) {
+    case 0:
+      if (colorButton.isShortPress()) {
+        Serial.println("Decrease Group");
+        groupWheel.increaseIndex();
+      }
+      if (brgButton.isShortPress()) {
+        Serial.println("Increase Group");
+        groupWheel.decreaseIndex();
+      }
+      break;
+  }
+}
+
 // Example usage
 void setup() {
   Serial.begin(115200);
@@ -90,28 +114,27 @@ void loop() {
   brgButton.handle();
   ledController.loop();
 
-  if (colorButton.isExtraLongPress()) {
-    Serial.println("Increase Group");
+  unsigned long colorPressTime = colorButton.getCurrentPressTime();
+  unsigned long brgPressTime = brgButton.getCurrentPressTime();
 
-    // ledController.setGroup(groupWheel.getIndex());
+  if (colorPressTime > 1000 && brgPressTime > 1000 && !bothPressed) {
+    Serial.println("Double Press");
+    bothPressed = true;
+    modeWheel.increaseIndex();
+    ledController.clear();
+  } else if (colorPressTime == 0 && brgPressTime == 0) {
+    bothPressed = false;
   }
-
-  switch (modeWheel.getIndex()) {
-    case 1:
-      // menu group
-      if (brgButton.isShortPress()) {
-        Serial.println("Increase Group");
-        groupWheel.increaseIndex();
-        ledController.setGroup(groupWheel.getIndex());
-      } else if (colorButton.isLongPress()) {
-        Serial.println("Decrease Group");
-        groupWheel.decreaseIndex();
-        ledController.setGroup(groupWheel.getIndex());
-      }
-      break;
-
-    default:
-      lamp();
-      break;
+  if (!(colorPressTime > 10 && brgPressTime > 10)) {
+    switch (modeWheel.getIndex()) {
+      case 1:
+        // Serial.println("Menu");
+        menu();
+        break;
+      case 0:
+        // Serial.println("Lamp");
+        lamp();
+        break;
+    }
   }
 }
