@@ -15,7 +15,7 @@ LedController ledController(D5);
 // Plus Button
 Button colorButton(D1);
 // Minus Button
-Button brgButton(D2, 500);
+Button brgButton(D2, 250);
 
 bool bothPressed = false;
 
