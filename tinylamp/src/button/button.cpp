@@ -2,11 +2,11 @@
 
 #include <Arduino.h>
 
-Button::Button(int pin, unsigned long longPressThreshold,
-               unsigned long extraLongPressThreshold)
+Button::Button(int pin, unsigned long holdTimeThreshold,
+               unsigned long shortPressThreshold)
     : buttonPin(pin),
-      longPressThreshold(longPressThreshold),
-      extraLongPressThreshold(extraLongPressThreshold),
+      holdTimeThreshold(holdTimeThreshold),
+      shortPressThreshold(shortPressThreshold),
       lastDebounceTime(0),
       debounceDelay(50),
       buttonPressTime(0),
@@ -14,9 +14,7 @@ Button::Button(int pin, unsigned long longPressThreshold,
       lastButtonState(LOW),
       shortPressDetected(false),
       longPressDetected(false),
-      extraLongPressDetected(false),
-      longPressHandled(false),
-      extraLongPressHandled(false) {
+      longPressHandled(false) {
   pinMode(buttonPin, INPUT_PULLUP);
 }
 
@@ -38,36 +36,22 @@ void Button::handle() {
         buttonPressTime = millis();
         shortPressDetected = false;
         longPressDetected = false;
-        extraLongPressDetected = false;
         longPressHandled = false;
-        extraLongPressHandled = false;
       }
       // Detect button release
       else {
-        if (!extraLongPressHandled &&
-            (millis() - buttonPressTime) >= extraLongPressThreshold) {
-          extraLongPressDetected = true;
-        } else if (!longPressHandled &&
-                   (millis() - buttonPressTime) >= longPressThreshold) {
-          longPressDetected = true;
-        } else if ((millis() - buttonPressTime) < longPressThreshold) {
+        unsigned long pressDuration = millis() - buttonPressTime;
+        if (!longPressHandled && pressDuration < shortPressThreshold) {
           shortPressDetected = true;
         }
         longPressHandled = false;  // Reset long press handled flag on release
-        extraLongPressHandled =
-            false;  // Reset extra long press handled flag on release
       }
     }
 
     // Check for long press while button is held down
-    if (buttonState == HIGH) {
-      if ((millis() - buttonPressTime) >= extraLongPressThreshold &&
-          !extraLongPressHandled) {
-        extraLongPressDetected = true;
-        extraLongPressHandled =
-            true;  // Ensure extra long press is handled only once per press
-      } else if ((millis() - buttonPressTime) >= longPressThreshold &&
-                 !longPressHandled) {
+    if (buttonState == HIGH &&
+        (millis() - buttonPressTime) >= holdTimeThreshold) {
+      if (!longPressHandled) {
         longPressDetected = true;
         longPressHandled =
             true;  // Ensure long press is handled only once per press
@@ -87,6 +71,14 @@ bool Button::isShortPress() {
   return false;
 }
 
+// Method to check if a long press has been detected and return the time held
+unsigned long Button::getLongPressTime() {
+  if (longPressDetected) {
+    return millis() - buttonPressTime;
+  }
+  return 0;
+}
+
 // Method to check if a long press has been detected
 bool Button::isLongPress() {
   if (longPressDetected) {
@@ -96,11 +88,10 @@ bool Button::isLongPress() {
   return false;
 }
 
-// Method to check if an extra long press has been detected
-bool Button::isExtraLongPress() {
-  if (extraLongPressDetected) {
-    extraLongPressDetected = false;
-    return true;
+// Method to return the time in ms the button is currently held for
+unsigned long Button::getCurrentPressTime() {
+  if (buttonState == HIGH) {
+    return millis() - buttonPressTime;
   }
-  return false;
+  return 0;
 }

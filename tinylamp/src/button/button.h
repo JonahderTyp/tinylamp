@@ -5,9 +5,9 @@
 
 class Button {
  public:
-  // Constructor to initialize the button pin and hold time thresholds
-  Button(int pin, unsigned long longPressThreshold = 500,
-         unsigned long extraLongPressThreshold = 2000);
+  // Constructor to initialize the button pin and hold time threshold
+  Button(int pin, unsigned long holdTimeThreshold = 1000,
+         unsigned long shortPressThreshold = 500);
 
   // Method to update the button state, should be called in the loop
   void handle();
@@ -15,19 +15,22 @@ class Button {
   // Method to check if a short press has been detected
   bool isShortPress();
 
+  // Method to check if a long press has been detected and return the time held
+  unsigned long getLongPressTime();
+
   // Method to check if a long press has been detected
   bool isLongPress();
 
-  // Method to check if an extra long press has been detected
-  bool isExtraLongPress();
+  // Method to return the time in ms the button is currently held for
+  unsigned long getCurrentPressTime();
 
  private:
   // Pin number where the button is connected
   int buttonPin;
   // Time threshold to differentiate between short and long press
-  unsigned long longPressThreshold;
-  // Time threshold to differentiate between long and extra long press
-  unsigned long extraLongPressThreshold;
+  unsigned long holdTimeThreshold;
+  // Time threshold for short press
+  unsigned long shortPressThreshold;
   // Time when the button state was last changed
   unsigned long lastDebounceTime;
   // Debounce delay time
@@ -43,12 +46,8 @@ class Button {
   bool shortPressDetected;
   // Flag for long press detection
   bool longPressDetected;
-  // Flag for extra long press detection
-  bool extraLongPressDetected;
   // Flag to indicate if the long press has been handled
   bool longPressHandled;
-  // Flag to indicate if the extra long press has been handled
-  bool extraLongPressHandled;
 };
 
 #endif  // BUTTON_H
