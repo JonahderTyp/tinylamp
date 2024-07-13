@@ -19,7 +19,7 @@ Button brgButton(D2, 500);
 
 bool bothPressed = false;
 
-ValueWheel<uint8_t> groupWheel = ValueWheel<uint8_t>({0, 1, 2, 3, 4});
+uint8_t group = 0;
 ValueWheel<uint8_t> modeWheel = ValueWheel<uint8_t>({0, 1});
 ValueWheel<uint8_t> menuWheel = ValueWheel<uint8_t>({0});
 
@@ -68,20 +68,24 @@ void lamp() {
 
 void menu() {
   if (colorButton.isLongPress()) {
-    Serial.println("Increase Menu");
     menuWheel.increaseIndex();
+    Serial.print("Menu ");
+    Serial.println(menuWheel.getIndex());
   }
   switch (menuWheel.getIndex()) {
     case 0:
       if (colorButton.isShortPress()) {
-        Serial.println("Decrease Group");
-        groupWheel.increaseIndex();
+        Serial.println("Increase Group");
+        group++;
       }
       if (brgButton.isShortPress()) {
-        Serial.println("Increase Group");
-        groupWheel.decreaseIndex();
+        Serial.println("Decrease Group");
+        group--;
       }
-      ledController.menu(menuWheel, groupWheel);
+      ledController.menu(menuWheel.getIndex(), group);
+      break;
+    default:
+      ledController.menu(menuWheel.getIndex(), -1);
       break;
   }
 }
