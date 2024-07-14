@@ -18,6 +18,9 @@ class ComHandler {
   void setSendCallback(CallbackFunction callback) {
     sendFunction = callback;
   }
+  void setMacAddress(const uint8_t mac[6]) {
+    std::copy(mac, mac + 6, macAddress);
+  }
 
   void dataReceived(const uint8_t* data, size_t len) {
     if (len != 24) {
@@ -25,45 +28,46 @@ class ComHandler {
     }
 
     Message message;
-    Serial.println("Decoding message:");
     message.decode(data);
 
     bool validchecksum = message.checkChecksum();
-    bool alreadySeen = isSeen(message.getMsgID());
+    bool newmessage = !isSeen(message.getMsgID());
 
-    Serial.print("checksum: ");
-    Serial.println(validchecksum);
-    Serial.print("alreadySeen: ");
-    Serial.println(alreadySeen);
-    Serial.print("newMessageAvailable: ");
-    Serial.println(hasNewMessageAvailable);
+    if (!validchecksum) {
+      Serial.println("Invalid checksum");
+    }
+    if (!newmessage) {
+      Serial.println("Already seen");
+    }
 
-    if (validchecksum && !alreadySeen && !hasNewMessageAvailable) {
+    if (validchecksum && newmessage) {
       Serial.println("Message is valid");
-      newMessage = message;
-      hasNewMessageAvailable = true;
+      if (hasNewMessageAvailable == false) {
+        newMessage = message;
+        hasNewMessageAvailable = true;
+      }
       Serial.println("Repeating message:");
-      sendFunction(message.encode(), len);
+      this->send(message);
     } else {
       Serial.println("Message is invalid");
     }
   }
 
+  // Returns true if a new message is available
   bool hasNewMessage() {
     return hasNewMessageAvailable;
   }
 
+  // Returns the new message
   Message getNewMessage() {
     hasNewMessageAvailable = false;
     return newMessage;
   }
 
-  void send(const Message& msg) {
-    sendFunction(msg.encode(), 24);
-  }
-
-  void setMacAddress(const uint8_t mac[6]) {
-    std::copy(mac, mac + 6, macAddress);
+  // Sends a new message
+  void sendNewMessage(const Message& msg) {
+    this->isSeen(msg.getMsgID());
+    this->send(msg);
   }
 
  private:
@@ -75,6 +79,14 @@ class ComHandler {
   Message newMessage;
   bool hasNewMessageAvailable = false;
 
+  // Sends an Message object over the network
+  void send(const Message& msg) {
+    sendFunction(msg.encode(), 24);
+  }
+
+  // returns true if the message has been seen before
+  // and adds the message to the list of seen messages
+  // returns false if the message is unknown
   bool isSeen(uint16_t seqNum) {
     for (uint16_t msgID : seenMsgs) {
       if (msgID == seqNum) {
@@ -86,18 +98,6 @@ class ComHandler {
       seenMsgs.erase(seenMsgs.begin());
     }
     return false;
-  }
-
-  bool isRelevant(uint8_t group) {
-    uint8_t received_mac[6];
-    uint8_t broadcast_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-    newMessage.getReceiverMacAddress(received_mac);
-    bool chk_mac =
-        memcmp(received_mac, this->macAddress, sizeof(received_mac)) == 0 ||
-        memcmp(received_mac, broadcast_mac, sizeof(received_mac)) == 0;
-    bool chk_group =
-        newMessage.getGroup() == 0 || newMessage.getGroup() == group;
-    return chk_group && chk_mac;
   }
 };
 

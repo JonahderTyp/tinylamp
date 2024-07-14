@@ -67,7 +67,20 @@ void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
   }
 }
 
+bool isRelevant(Message msg) {
+  uint8_t received_mac[6];
+  msg.getReceiverMacAddress(received_mac);
+  bool chk_mac =
+      memcmp(received_mac, macAddress, sizeof(received_mac)) == 0 ||
+      memcmp(received_mac, broadcastAddress, sizeof(received_mac)) == 0;
+  bool chk_group = msg.getGroup() == 0 || msg.getGroup() == group;
+  return chk_group && chk_mac;
+}
+
 void handleMessage(Message message) {
+  if (!isRelevant(message)) {
+    return;
+  }
   if (message.isCommand()) {
     if (message.getCFActive(command::COLORINDEX))
       ledController.setColor(message.getCFDataAtIndex(command::COLORINDEX));
@@ -107,7 +120,7 @@ void lamp() {
 
     message.finalize();
     // message.print();
-    comHandler.send(message);
+    comHandler.sendNewMessage(message);
   }
 
   if (comHandler.hasNewMessage()) {
