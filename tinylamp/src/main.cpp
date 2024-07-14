@@ -26,14 +26,10 @@ ValueWheel<uint8_t> modeWheel = ValueWheel<uint8_t>({0, 1});
 ValueWheel<uint8_t> menuWheel = ValueWheel<uint8_t>({0});
 
 void led(int i) {
-  Serial.print("LED: ");
-  Serial.println(i);
   digitalWrite(LED_BUILTIN, !i);
 }
 
-void sendMsg(void *data, size_t len) {
-  Serial.println("Sending Message");
-  activity.blink();
+void printmsg(uint8_t *data, size_t len) {
   for (size_t i = 0; i < len; i++) {
     Serial.print(i);
     Serial.print("\t");
@@ -44,12 +40,19 @@ void sendMsg(void *data, size_t len) {
     Serial.print("\t");
   }
   Serial.println();
+}
+
+void sendMsg(void *data, size_t len) {
+  Serial.println("Sending Message");
+  printmsg((uint8_t *)data, len);
+  activity.blink();
   esp_now_send(broadcastAddress, (uint8_t *)data, len);
 }
 
 // Callback when data is received
 void OnDataRecv(uint8_t *mac, uint8_t *incomingData, uint8_t len) {
-  Serial.println("Data Received");
+  Serial.println("Data Received:");
+  printmsg(incomingData, len);
   activity.blink();
   comHandler.dataReceived(incomingData, len);
 }
@@ -65,8 +68,6 @@ void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
 }
 
 void handleMessage(Message message) {
-  Serial.println("Message Received:");
-  message.print();
   if (message.isCommand()) {
     if (message.getCFActive(command::COLORINDEX))
       ledController.setColor(message.getCFDataAtIndex(command::COLORINDEX));
