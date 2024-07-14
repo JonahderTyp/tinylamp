@@ -147,6 +147,7 @@ class Message {
   }
 
   // from object to raw
+  // Calculates the Checksum
   uint8_t* encode() const {
     // uint8_t localData[LENGTH];
     // std::memcpy(localData, data, LENGTH);
